@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MemberShipManagement_CleanArchitecture.Domain\MemberShipManagement_CleanArchitecture.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Document\Command\CreateCommand\" />
+    <Folder Include="Document\Command\DeleteCommand\" />
+    <Folder Include="Document\Command\UpdateCommand\" />
+    <Folder Include="Document\Query\" />
+    <Folder Include="DuePayment\Command\CreateCommand\" />
+    <Folder Include="DuePayment\Command\DeleteCommand\" />
+    <Folder Include="DuePayment\Command\UpdateCommand\" />
+    <Folder Include="DuePayment\Query\" />
+    <Folder Include="Membership\Command\CreateCommand\" />
+    <Folder Include="Membership\Command\DeleteCommand\" />
+    <Folder Include="Membership\Command\UpdateCommand\" />
+    <Folder Include="Membership\Query\" />
+    <Folder Include="Member\Command\CreateCommand\" />
+    <Folder Include="Member\Command\DeleteCommand\" />
+    <Folder Include="Member\Command\UpdateCommand\" />
+    <Folder Include="Member\Query\" />
+    <Folder Include="Package\Command\CreateCommand\" />
+    <Folder Include="Package\Command\DeleteCommand\" />
+    <Folder Include="Package\Command\UpdateCommand\" />
+    <Folder Include="Package\Query\" />
+    <Folder Include="Payment\Command\CreateCommand\" />
+    <Folder Include="Payment\Command\DeleteCommand\" />
+    <Folder Include="Payment\Command\UpdateCommand\" />
+    <Folder Include="Payment\Query\" />
+  </ItemGroup>
+
+</Project>
