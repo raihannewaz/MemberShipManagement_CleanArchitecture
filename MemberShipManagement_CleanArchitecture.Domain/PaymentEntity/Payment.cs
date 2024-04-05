@@ -9,7 +9,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
 {
     public class Payment
     {
-        public string? PaymentId { get; set; }
+        public int PaymentId { get; set; }
 
         public string? MembershipId { get; set; }
         public Membership? Membership { get; set; }

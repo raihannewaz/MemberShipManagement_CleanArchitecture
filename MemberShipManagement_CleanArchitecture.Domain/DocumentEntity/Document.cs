@@ -10,11 +10,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
 {
     public class Document
     {
-        public string? DocumentId { get; set; }
+        public int DocumentId { get; set; }
         public string? DocumentType { get; set; }
         public string? DocumentUrl { get; set; }
         
-        public string? MemberId { get; set; }
+        public int MemberId { get; set; }
         public Member? Member { get; set; }
 
 

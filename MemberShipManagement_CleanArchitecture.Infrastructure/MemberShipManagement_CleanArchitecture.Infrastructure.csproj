@@ -19,4 +19,8 @@
     <ProjectReference Include="..\MemberShipManagement_CleanArchitecture.Application\MemberShipManagement_CleanArchitecture.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Penalty\" />
+  </ItemGroup>
+
 </Project>

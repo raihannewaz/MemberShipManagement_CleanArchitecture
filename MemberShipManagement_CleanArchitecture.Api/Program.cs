@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using FluentValidation.AspNetCore;
 using MemberShipManagement_CleanArchitecture.Application;
 using MemberShipManagement_CleanArchitecture.Infrastructure;
 

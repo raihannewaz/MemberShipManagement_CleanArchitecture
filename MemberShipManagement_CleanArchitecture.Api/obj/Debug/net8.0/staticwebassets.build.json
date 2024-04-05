@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "KJOlZAyWdNJLbUj16n59CCfZ0/5YUfA8RdYulJZRZUM=",
+  "Hash": "VF0Jy4WHu0mpQqD3KYp8MOld5+V+ZfXsWDnOCtC1pQ4=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MemberShipManagement_CleanArchitecture.Api\\wwwroot",
+      "Source": "MemberShipManagement_CleanArchitecture.Api",
+      "ContentRoot": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

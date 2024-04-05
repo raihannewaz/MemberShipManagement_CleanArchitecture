@@ -10,9 +10,9 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
 {
     public class Membership
     {
-        public string? MembershipId { get; set; }
+        public int MembershipId { get; set; }
 
-        public string? MemberId {  get; set; }
+        public int MemberId {  get; set; }
         public Member? Member { get; set; }
 
         public int PackageId {  get; set; }

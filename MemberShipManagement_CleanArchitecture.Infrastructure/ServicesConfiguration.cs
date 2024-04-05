@@ -16,11 +16,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
         {
 
             services.AddDbContext<ApplicationDbContext>(options =>
-            {
-                options.UseSqlServer(configuration.GetConnectionString("DbCon"));
-            });
+                options.UseSqlServer(configuration.GetConnectionString("DbCon")));
 
-            services.AddTransient<DapperDbContext>();
+
+            //services.AddTransient<DapperDbContext>();
 
             return services;
         }

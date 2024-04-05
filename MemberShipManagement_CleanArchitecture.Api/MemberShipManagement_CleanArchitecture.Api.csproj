@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\V2\" />
-    <Folder Include="Controllers\V1\" />
+    <Folder Include="wwwroot\MemberImage\" />
   </ItemGroup>
 
 </Project>

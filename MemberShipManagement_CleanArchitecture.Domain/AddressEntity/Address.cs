@@ -9,16 +9,16 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
 {
     public class Address
     {
-        public string? AddressId { get; set; }
+        public int AddressId { get; set; }
         public string? AddressType { get; set; }
         public string? HouseNo { get; set; }
         public string? City { get; set; }
         public string? Region { get; set; }
         public string? PostOffice { get; set; }
-        public int? PostalCode { get; set; }
+        public int PostalCode { get; set; }
         public string? Country { get; set; }
 
-        public string? MemberId { get; set; }
+        public int MemberId { get; set; }
         public Member? Member { get; set; }
 
 

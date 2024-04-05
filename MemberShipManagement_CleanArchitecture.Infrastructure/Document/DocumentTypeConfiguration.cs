@@ -13,7 +13,17 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
     {
         public void Configure(EntityTypeBuilder<Domain.DocumentEntity.Document> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(d => d.DocumentId);
+            builder.Property(d => d.DocumentId).ValueGeneratedOnAdd();
+
+            builder.Property(d => d.DocumentType).IsRequired();
+
+            builder.Property(d => d.DocumentUrl).IsRequired();
+
+            builder.HasOne(d => d.Member)
+                   .WithMany(m => m.Document)
+                   .HasForeignKey(d => d.MemberId)
+                   .IsRequired();
         }
     }
 }
