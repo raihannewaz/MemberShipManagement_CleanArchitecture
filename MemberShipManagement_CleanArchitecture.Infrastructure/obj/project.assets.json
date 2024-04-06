@@ -4387,23 +4387,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\": {},
+    "C:\\Users\\Sys-05\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+      "projectUniqueName": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
       "projectName": "MemberShipManagement_CleanArchitecture.Infrastructure",
-      "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\",
-      "outputPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
+      "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
+      "outputPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Raihan_IsDB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sys-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4419,8 +4419,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
-              "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
+            "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+              "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
             }
           }
         }
