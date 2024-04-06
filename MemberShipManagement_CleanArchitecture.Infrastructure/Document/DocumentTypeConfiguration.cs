@@ -20,10 +20,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
 
             builder.Property(d => d.DocumentUrl).IsRequired();
 
-            builder.HasOne(d => d.Member)
-                   .WithMany(m => m.Document)
-                   .HasForeignKey(d => d.MemberId)
-                   .IsRequired();
+            //builder.HasOne(d => d.Member)
+            //       .WithMany(m => m.Document)
+            //       .HasForeignKey(d => d.MemberId)
+            //       .IsRequired();
         }
     }
 }

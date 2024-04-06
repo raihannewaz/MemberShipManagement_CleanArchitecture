@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hmzz3V7VZRsAH2QTua5XQPtKtpp09y0TcRE9URWqX8mYsfQPGNMNNPwdI9dXvlNTlaqOsnAGarMGhL1JbRULnQ==",
+  "dgSpecHash": "O9ec7iJ3bzUa/dD6S9uHBfnAuen9EZGI+z8Thftm3fMh0yUJw7kEua0Dd7RCLPdAJ9awLNHO9u4PmfQsgoKJMA==",
   "success": true,
-  "projectFilePath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
+  "projectFilePath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sys-05\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\Sys-05\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

@@ -3,9 +3,11 @@ using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 
@@ -22,12 +24,12 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         public DateTime DOB {  get; private set; }
 
         public string? ProfileImageUrl { get; set; }
-        public DateTime AccountCreateDate { get; private set; }
-        public bool IsActive { get; private set; }
-        public List<Document>? Document { get; set; }
-        public List<Address>? Address { get; set; }
+        public DateTime AccountCreateDate { get;  set; }
+        public bool IsActive { get;  set; }
+        //public List<Document>? Document { get; set; }
+        //public List<Address>? Address { get; set; }
 
-
+        [NotMapped]
         public IFormFile? ImageFile { get; set; }
 
 

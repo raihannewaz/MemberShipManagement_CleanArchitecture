@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638480134166397695_a8bd1f9386.jpg",
+      "PackagePath": "staticwebassets\\MemberImage\\638480134166397695_a8bd1f9386.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MemberShipManagement_CleanArchitecture.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "build\\MemberShipManagement_CleanArchitecture.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "buildMultiTargeting\\MemberShipManagement_CleanArchitecture.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "buildTransitive\\MemberShipManagement_CleanArchitecture.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -3648,11 +3648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
+      "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
       "projectName": "MemberShipManagement_CleanArchitecture.Api",
-      "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
+      "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
       "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
-      "outputPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\obj\\",
+      "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3674,11 +3674,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
-              "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
+            "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+              "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
             },
-            "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
-              "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj"
+            "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
+              "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj"
             }
           }
         }

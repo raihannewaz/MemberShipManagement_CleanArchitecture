@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {}
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Application",
-        "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
         "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
-        "outputPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\obj\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
-                "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -87,14 +87,14 @@
         }
       }
     },
-    "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Domain",
-        "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
         "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
-        "outputPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\obj\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -158,14 +158,14 @@
         }
       }
     },
-    "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Infrastructure",
-        "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
-        "outputPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -187,8 +187,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
-                "projectPath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
               }
             }
           }
@@ -211,6 +211,12 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

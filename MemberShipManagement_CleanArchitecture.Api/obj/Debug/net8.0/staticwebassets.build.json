@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VF0Jy4WHu0mpQqD3KYp8MOld5+V+ZfXsWDnOCtC1pQ4=",
+  "Hash": "MmMyiTcPkIbW2IvQ1o+pO8OvSJo96cOgFANGKZWz1p8=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -10,10 +10,30 @@
     {
       "Name": "MemberShipManagement_CleanArchitecture.Api\\wwwroot",
       "Source": "MemberShipManagement_CleanArchitecture.Api",
-      "ContentRoot": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638480134166397695_a8bd1f9386.jpg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "MemberImage/638480134166397695_a8bd1f9386.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberImage\\638480134166397695_a8bd1f9386.jpg"
+    }
+  ]
 }

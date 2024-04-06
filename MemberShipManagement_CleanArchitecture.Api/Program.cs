@@ -2,6 +2,9 @@ using Asp.Versioning;
 using FluentValidation.AspNetCore;
 using MemberShipManagement_CleanArchitecture.Application;
 using MemberShipManagement_CleanArchitecture.Infrastructure;
+using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 
 namespace MemberShipManagement_CleanArchitecture.Api
@@ -12,13 +15,14 @@ namespace MemberShipManagement_CleanArchitecture.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            // Add services to the container
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+         
 
             //layers
             builder.Services.AddApplication();

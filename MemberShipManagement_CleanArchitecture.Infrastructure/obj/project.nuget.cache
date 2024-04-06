@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fwHMXV9MDqhQEtTCX8eSw/4c6HRP2kE4LiByYKnF7Mx8KphR2i35UcqU4qGF+ifPxB78VS7z/z2YTs/liuc2mw==",
+  "dgSpecHash": "iP73qZ//i7W1+aWh7O5KOmWSAKLV/Mwvqql9cNVqfIm6aILR81EeHqkj/RXuIb0x8th7k3PTElnuC0Y4MIgXaQ==",
   "success": true,
-  "projectFilePath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+  "projectFilePath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sys-05\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Sys-05\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

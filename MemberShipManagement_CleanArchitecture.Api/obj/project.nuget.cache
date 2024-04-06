@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nth7D5GecbiZXjocOleD7KQpSMpuowXve6RZa2mMdbLc0AKqqmCItPOccpneGcvbzOcfk3dl3VAJ+aKF7rqugQ==",
+  "dgSpecHash": "9Qi8r4zhFpRDSHjtxeVnHVbdsU0t4uLSUEFkm7PRwn5axcOXgwAtVR6t8fPPn9v/JLfjZGmpgZRvGKM2gOWVGA==",
   "success": true,
-  "projectFilePath": "D:\\Raihan\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
+  "projectFilePath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sys-05\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
     "C:\\Users\\Sys-05\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",

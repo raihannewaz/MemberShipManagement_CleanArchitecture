@@ -19,10 +19,20 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.
 
         public async Task<Member> Handle(CreateMemberCommand request, CancellationToken cancellationToken)
         {
-            var member = Member.CreateMember(request.FirstName, request.LastName,request.Email,request.PhoneNo,request.DOB,request.ImageFile);
-            //var image = await _memberRepository.UploadImageAsync(request.ImageFile);
-            await _memberRepository.CreateAsync(member);
-            return member;
+            try
+            {
+                var member = Member.CreateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB, request.ImageFile);
+
+                await _memberRepository.CreateAsync(member);
+
+                await _memberRepository.SaveChangeAsync();
+                return member;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
     }
 }

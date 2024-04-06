@@ -1,6 +1,10 @@
 ﻿
+using FluentValidation;
 using FluentValidation.AspNetCore;
+using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validation;
+using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -17,7 +21,8 @@ namespace MemberShipManagement_CleanArchitecture.Application
             });
 
             services.AddFluentValidationAutoValidation();
-            services.AddFluentValidationClientsideAdapters();
+            services.AddScoped<IValidator<CreateMemberCommand>, CreateMemberCommandValidation>();
+
 
             return services;
         }

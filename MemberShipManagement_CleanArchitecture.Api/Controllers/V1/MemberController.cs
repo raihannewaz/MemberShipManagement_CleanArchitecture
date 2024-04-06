@@ -19,9 +19,9 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create(CreateMemberCommand createMember)
         {
-            var data = await _sender.Send(new CreateMemberCommand());
+            var data = await _sender.Send(createMember);
 
             return Ok(data);
         }

@@ -1,7 +1,9 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
@@ -32,13 +34,16 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
                 if (!IsImageFileValid(member.ImageFile.FileName))
                 {
                     throw new ArgumentException("Invalid image file format. Please upload a JPG or PNG file.");
-                } 
+                }
 
                 member.ProfileImageUrl = await UploadImageAsync(member.ImageFile);
 
+
             }
+            member.AccountCreateDate = DateTime.Now;
+            member.IsActive = true;
             await _context.Members.AddAsync(member);
-            await _context.SaveChangesAsync();
+
             return member;
         }
 
@@ -47,9 +52,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             throw new NotImplementedException();
         }
 
-        public Task SaveChangeAsync()
+        public async Task SaveChangeAsync()
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
 
         public Task<Domain.MemberEntity.Member> UpdateAsync(Domain.MemberEntity.Member member)

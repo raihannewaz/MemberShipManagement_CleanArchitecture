@@ -22,10 +22,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Address
             builder.Property(a => a.Country).IsRequired();
             builder.Property(a => a.PostalCode).IsRequired();
 
-            builder.HasOne(a => a.Member)
-                   .WithMany(m => m.Address)
-                   .HasForeignKey(a => a.MemberId)
-                   .IsRequired();
+            //builder.HasOne(a => a.Member)
+            //       .WithMany(m => m.Address)
+            //       .HasForeignKey(a => a.MemberId)
+            //       .IsRequired();
         }
     }
 }
