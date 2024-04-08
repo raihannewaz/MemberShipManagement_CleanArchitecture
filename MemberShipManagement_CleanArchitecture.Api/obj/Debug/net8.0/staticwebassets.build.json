@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TV/Vr19DL/wGb5St4uchaubzGejC6J0qww2I2NwSNAs=",
+  "Hash": "WX8mAO6MdUMGvGawKb0riJMIbMHTUPMQiU02nSmSwC4=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -15,25 +15,5 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [
-    {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
-      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
-      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberImage/638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberImage\\638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
-    }
-  ]
+  "Assets": []
 }

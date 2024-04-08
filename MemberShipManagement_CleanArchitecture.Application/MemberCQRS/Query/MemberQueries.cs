@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
 {
-    public class MemberQueries: IRequest<IEnumerable<Member>>
+    public class MemberQueries : IRequest<IEnumerable<Member>>
     {
         public int MemberId { get; set; }
 

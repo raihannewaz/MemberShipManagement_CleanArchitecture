@@ -17,8 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Address\" />
-    <Folder Include="Address\Command\CreateCommand\" />
+    <Folder Include="AddressCQRS\Command\DeleteCommand\" />
+    <Folder Include="AddressCQRS\Command\UpdateCommand\" />
+    <Folder Include="AddressCQRS\Query\" />
+    <Folder Include="AddressCQRS\Validation\" />
     <Folder Include="Document\Command\CreateCommand\" />
     <Folder Include="Document\Command\DeleteCommand\" />
     <Folder Include="Document\Command\UpdateCommand\" />

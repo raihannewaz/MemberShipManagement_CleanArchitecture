@@ -32,7 +32,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.
             {
                 throw ex;
             }
-            
+
         }
     }
 }

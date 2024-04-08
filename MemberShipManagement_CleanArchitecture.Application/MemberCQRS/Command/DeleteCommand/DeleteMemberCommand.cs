@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand
 {
-    public class DeleteMemberCommand: IRequest<int>
+    public class DeleteMemberCommand : IRequest<int>
     {
         public int MemberId { get; set; }
     }
