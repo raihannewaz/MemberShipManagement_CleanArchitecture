@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MmMyiTcPkIbW2IvQ1o+pO8OvSJo96cOgFANGKZWz1p8=",
+  "Hash": "TV/Vr19DL/wGb5St4uchaubzGejC6J0qww2I2NwSNAs=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638480134166397695_a8bd1f9386.jpg",
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
       "SourceId": "MemberShipManagement_CleanArchitecture.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberImage/638480134166397695_a8bd1f9386.jpg",
+      "RelativePath": "MemberImage/638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberImage\\638480134166397695_a8bd1f9386.jpg"
+      "OriginalItemSpec": "wwwroot\\MemberImage\\638481792509644949_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
     }
   ]
 }

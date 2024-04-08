@@ -47,20 +47,52 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             return member;
         }
 
-        public Task DeleteAsync(Domain.MemberEntity.Member member)
+        public async Task DeleteAsync(Domain.MemberEntity.Member member)
         {
-            throw new NotImplementedException();
+             _context.Members.Remove(member);
+            await _context.SaveChangesAsync();
         }
+
+        public async Task<Domain.MemberEntity.Member> GetById(int id)
+        {
+            using (var conn = _dapperDbContext.CreateConnection())
+            {
+                var sq = $"SELECT * FROM Members WHERE MemberId = {id}";
+
+                var data = await conn.QueryFirstOrDefaultAsync<Domain.MemberEntity.Member>(sq);
+
+                return data;
+            }
+        }
+
 
         public async Task SaveChangeAsync()
         {
             await _context.SaveChangesAsync();
         }
 
-        public Task<Domain.MemberEntity.Member> UpdateAsync(Domain.MemberEntity.Member member)
+        public async Task UpdateAsync(Domain.MemberEntity.Member member)
         {
-            throw new NotImplementedException();
+            if (member.ImageFile != null)
+            {
+                if (!string.IsNullOrEmpty(member.ProfileImageUrl))
+                {
+                    string existingPhotoPath = member.ProfileImageUrl;
+                    if (File.Exists(existingPhotoPath))
+                    {
+                        File.Delete(existingPhotoPath);
+                    }
+                }
+
+                member.ProfileImageUrl = await UploadImageAsync(member.ImageFile);
+
+            }
+            _context.Entry(member).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
         }
+
+
+
 
 
         public async Task<string> UploadImageAsync(IFormFile file)

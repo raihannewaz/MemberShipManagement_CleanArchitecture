@@ -2,6 +2,7 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validation;
 using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using Microsoft.AspNetCore.Identity;
@@ -22,6 +23,7 @@ namespace MemberShipManagement_CleanArchitecture.Application
 
             services.AddFluentValidationAutoValidation();
             services.AddScoped<IValidator<CreateMemberCommand>, CreateMemberCommandValidation>();
+            services.AddScoped<IValidator<UpdateMemberCommand>, UpdateMemberCommandValidation>();
 
 
             return services;

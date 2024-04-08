@@ -15,7 +15,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
         public string? City { get; set; }
         public string? Region { get; set; }
         public string? PostOffice { get; set; }
-        public int PostalCode { get; set; }
+        public string? PostalCode { get; set; }
         public string? Country { get; set; }
 
         public int MemberId { get; set; }

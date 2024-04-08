@@ -26,10 +26,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         public string? ProfileImageUrl { get; set; }
         public DateTime AccountCreateDate { get;  set; }
         public bool IsActive { get;  set; }
-        //public List<Document>? Document { get; set; }
-        //public List<Address>? Address { get; set; }
+        public List<Document>? Document { get; set; }
+        public List<Address>? Address { get; set; }
 
         [NotMapped]
+        [JsonIgnore]
         public IFormFile? ImageFile { get; set; }
 
 
@@ -51,18 +52,59 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         }
 
 
+
+
         public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob,IFormFile file)
         {
             return new Member(fName, lName, email, phone, dob, file);
         }
 
+        //public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file, bool isactive)
+        //{
 
-        public static void AutoCreatableFieldsForMember()
+        //    FirstName = fName;
+        //    LastName = lName;
+        //    Email = email;
+        //    PhoneNo = phone;
+        //    DOB = dob;
+        //    ImageFile = file;
+        //    IsActive = isactive;
+        //}
+
+        public void UpdateMember(string? fName, string? lName, string? email, string? phone, DateTime? dob, IFormFile? file, bool? isactive)
         {
-            var m = new Member();
-            m.AccountCreateDate = DateTime.Now;
-            m.IsActive = true;
+            if (fName != null)
+            {
+                FirstName = fName;
+            }
+
+            if (lName != null)
+            {
+                LastName = lName;
+            }
+            if (email != null)
+            {
+                Email = email;
+            }
+            if (phone != null)
+            {
+                PhoneNo = phone;
+            }
+            if (dob != null)
+            {
+                DOB = dob.Value;
+            }
+
+            if (file != null)
+            {
+                ImageFile = file;
+            }
+            if (isactive != null)
+            {
+                IsActive = isactive.Value;
+            }
         }
+
 
 
     }

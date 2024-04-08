@@ -31,9 +31,6 @@
     <Folder Include="Membership\Command\DeleteCommand\" />
     <Folder Include="Membership\Command\UpdateCommand\" />
     <Folder Include="Membership\Query\" />
-    <Folder Include="MemberCQRS\Command\DeleteCommand\" />
-    <Folder Include="MemberCQRS\Command\UpdateCommand\" />
-    <Folder Include="MemberCQRS\Query\" />
     <Folder Include="Package\Command\CreateCommand\" />
     <Folder Include="Package\Command\DeleteCommand\" />
     <Folder Include="Package\Command\UpdateCommand\" />

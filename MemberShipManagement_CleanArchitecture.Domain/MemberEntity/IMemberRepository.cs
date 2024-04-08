@@ -10,9 +10,9 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
     public interface IMemberRepository
     {
         Task<Member> CreateAsync(Member member);
-        Task<Member> UpdateAsync(Member member);
+        Task UpdateAsync(Member member);
         Task DeleteAsync(Member member);
-        //Task<string> UploadImageAsync(IFormFile file);
+        Task<Member> GetById(int id);
 
         Task SaveChangeAsync();
     }
