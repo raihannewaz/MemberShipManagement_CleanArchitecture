@@ -19,8 +19,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
 
         public async Task<IEnumerable<Member>> Handle(MemberQueries request, CancellationToken cancellationToken)
         {
-            var data = await _memberRepository.GetById(request.MemberId);
-            return new List<Member> { data };
+            var q = request.MemberDetails(request.MemberId);
+            var data = await _memberRepository.GetByIdSql(q);
+            return data;
         }
     }
 }

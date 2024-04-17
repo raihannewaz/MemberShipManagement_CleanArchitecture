@@ -24,9 +24,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             builder.Property(m => m.DOB).IsRequired();
             builder.Property(m => m.AccountCreateDate).IsRequired();
 
-            //builder.HasCheckConstraint("CK_Member_PhoneNo_StartsWith", "[PhoneNo] LIKE '018%' OR [PhoneNo] LIKE '017%' OR [PhoneNo] LIKE '016%' OR [PhoneNo] LIKE '019%' OR [PhoneNo] LIKE '013%' OR [PhoneNo] LIKE '014%' OR [PhoneNo] LIKE '015%'");
-            //builder.HasCheckConstraint("CK_Member_DOB_MinimumAge", "[DOB] <= DATEADD(year, -18, GETDATE())");
-
         }
     }
 }

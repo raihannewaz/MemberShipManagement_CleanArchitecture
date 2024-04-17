@@ -22,9 +22,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.
             try
             {
                 var member = Member.CreateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB, request.ImageFile);
-
                 await _memberRepository.CreateAsync(member);
-
                 await _memberRepository.SaveChangeAsync();
                 return member;
             }

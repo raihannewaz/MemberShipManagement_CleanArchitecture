@@ -15,17 +15,17 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 {
     public class Member
     {
-        public int MemberId { get; private set; } 
+        public int MemberId { get; private set; }
 
         public string? FirstName { get; private set; }
         public string? LastName { get; private set; }
         public string? Email { get; private set; }
         public string? PhoneNo { get; private set; }
-        public DateTime DOB {  get; private set; }
+        public DateTime? DOB { get; private set; }
 
-        public string? ProfileImageUrl { get; set; }
-        public DateTime AccountCreateDate { get;  set; }
-        public bool IsActive { get;  set; }
+        public string? ProfileImageUrl { get; private set; }
+        public DateTime AccountCreateDate { get; set; }
+        public bool? IsActive { get; set; }
         public List<Document>? Document { get; set; }
         public List<Address>? Address { get; set; }
 
@@ -54,24 +54,14 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
 
 
-        public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob,IFormFile file)
+        public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file)
         {
             return new Member(fName, lName, email, phone, dob, file);
         }
 
-        //public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file, bool isactive)
-        //{
 
-        //    FirstName = fName;
-        //    LastName = lName;
-        //    Email = email;
-        //    PhoneNo = phone;
-        //    DOB = dob;
-        //    ImageFile = file;
-        //    IsActive = isactive;
-        //}
 
-        public void UpdateMember(string? fName, string? lName, string? email, string? phone, DateTime? dob, IFormFile? file, bool? isactive)
+        public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file, bool isactive)
         {
             if (fName != null)
             {
@@ -90,22 +80,26 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
             {
                 PhoneNo = phone;
             }
-            if (dob != null)
+            if (dob != DateTime.MinValue)
             {
-                DOB = dob.Value;
+                DOB = dob;
             }
 
             if (file != null)
             {
                 ImageFile = file;
             }
-            if (isactive != null)
+            if (isactive != false || isactive != true)
             {
-                IsActive = isactive.Value;
+                IsActive = isactive;
             }
         }
 
 
+        public void PhotoUrl(string url)
+        {
+            ProfileImageUrl = url;
+        }
 
     }
 }

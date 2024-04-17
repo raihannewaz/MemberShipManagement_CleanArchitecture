@@ -1,4 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Member;
@@ -10,6 +11,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Address;
+using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Document;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure
 {
@@ -26,6 +30,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
             services.AddTransient<DapperDbContext>();
 
             services.AddScoped(typeof(IMemberRepository), typeof(MemberRepository));
+            services.AddScoped(typeof(IAddressRepository), typeof(AddressRepository));
+            services.AddScoped(typeof(IDocumentRepository), typeof(DocumentRepository));
 
             return services;
         }

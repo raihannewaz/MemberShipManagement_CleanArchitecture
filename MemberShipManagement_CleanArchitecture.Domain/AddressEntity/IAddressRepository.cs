@@ -13,6 +13,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
         Task UpdateAsync(Address a);
         Task DeleteAsync(Address a);
 
+        Task<Address> GetByMemberIdAndType(int memberId, string addressType);
         Task<Address> GetById(int id);
         Task SaveChangeAsync();
     }

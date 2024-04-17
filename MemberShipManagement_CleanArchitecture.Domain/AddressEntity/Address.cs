@@ -22,12 +22,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
         public Member? Member { get; set; }
 
 
-        public enum EAddressType
-        {
-            Present,
-            Parmanent
-        }
-
         private Address()
         {
 
@@ -50,6 +44,44 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
             return new Address(addressType, houseNo, city, region, postOffice, postalCode, country, memberId);
         }
 
-        
+        public void UpdateAddress(string addressType, string houseNo, string city, string region, string postOffice, string postalCode, string country)
+        {
+            if (addressType != null)
+            {
+                AddressType = addressType;
+            }
+            if (houseNo != null)
+            {
+                HouseNo = houseNo;
+            }
+            if (city != null)
+            {
+                City = city;
+            }
+            if (region != null)
+            {
+                Region = region;
+            }
+            if (postOffice != null)
+            {
+                PostOffice = postOffice;
+            }
+            if (postalCode != null)
+            {
+                PostalCode = postalCode;
+            }
+            if (country != null)
+            {
+                Country = country;
+            }
+        }
+
+
+
+        public enum EAddressType
+        {
+            Present,
+            Parmanent
+        }
     }
 }

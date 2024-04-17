@@ -25,7 +25,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validati
 
             RuleFor(m => m.DOB)
                 .Must(BeAtLeast18YearsOld).WithMessage("Must be at least 18 years old.")
-                .When(m => m.DOB.HasValue);
+;
 
             RuleFor(m => m.PhoneNo)
                 .Must(phoneNo => string.IsNullOrEmpty(phoneNo) || BeAValidPhoneNumber(phoneNo)).WithMessage("Invalid Phone Number");
@@ -37,14 +37,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validati
             return Regex.IsMatch(phoneNo, pattern);
         }
 
-        private bool BeAtLeast18YearsOld(DateTime? dob)
+        private bool BeAtLeast18YearsOld(DateTime dob)
         {
-            if (dob.HasValue)
-            {
-                DateTime minDate = DateTime.Today.AddYears(-18);
-                return dob.Value <= minDate;
-            }
-            return true;
+
+            DateTime minDate = DateTime.Today.AddYears(-18);
+            return dob <= minDate;
+
         }
     }
 }

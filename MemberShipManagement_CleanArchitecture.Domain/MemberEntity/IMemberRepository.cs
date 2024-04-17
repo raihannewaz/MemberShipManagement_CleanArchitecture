@@ -12,7 +12,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         Task<Member> CreateAsync(Member member);
         Task UpdateAsync(Member member);
         Task DeleteAsync(Member member);
-        Task<Member> GetById(int id);
+        Task<IEnumerable<Member>> GetByIdSql(string a);
+        Task<Member> GetById(int a);
 
         Task SaveChangeAsync();
     }

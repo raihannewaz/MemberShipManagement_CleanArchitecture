@@ -17,9 +17,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.
         public string? LastName { get;  set; }
         public string? Email { get;  set; }
         public string? PhoneNo { get;  set; }
-        public DateTime? DOB { get;  set; }
+        public DateTime DOB { get;  set; }
       
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         public IFormFile? ImageFile { get; set; }
 

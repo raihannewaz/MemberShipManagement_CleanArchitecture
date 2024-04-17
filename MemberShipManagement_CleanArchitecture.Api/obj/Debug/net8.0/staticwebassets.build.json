@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WX8mAO6MdUMGvGawKb0riJMIbMHTUPMQiU02nSmSwC4=",
+  "Hash": "cn2rvF2PVvghyi7PxcCx90ydSW1kZ640Muw+7caTCVE=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -15,5 +15,82 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\DocumentsFile\\638489526502583369_a8bd1f9386.jpg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "DocumentsFile/638489526502583369_a8bd1f9386.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DocumentsFile\\638489526502583369_a8bd1f9386.jpg"
+    },
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\DocumentsFile\\638489526815227520_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "DocumentsFile/638489526815227520_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DocumentsFile\\638489526815227520_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
+    },
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638489573586495619_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "MemberImage/638489573586495619_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberImage\\638489573586495619_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
+    },
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberImage\\638489590953175365_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "MemberImage/638489590953175365_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberImage\\638489590953175365_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
+    }
+  ]
 }

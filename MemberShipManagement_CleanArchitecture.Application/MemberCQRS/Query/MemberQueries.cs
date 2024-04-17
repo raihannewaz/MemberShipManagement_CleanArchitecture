@@ -12,10 +12,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
     {
         public int MemberId { get; set; }
 
-        //public string MemberByIdSql()
-        //{
-        //    return $"SELECT * FROM Members Where MemberId={MemberId}";
-        //}
+        public string MemberDetails(int id)
+        {
+            return @$"SELECT * FROM Members where MemberId = {id}
+                      SELECT * From Documents where MemberId = {id}
+                      SELECT * From Addresses where MemberId = {id}";
+        }
     }
 
 }

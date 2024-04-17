@@ -22,11 +22,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.
             var member = await _memberRepository.GetById(request.MemberId);
             if (member == null)
             {
-                throw new ArgumentException($"Product with ID {request.MemberId} not found.");
+                throw new ArgumentException($"Member with ID {request.MemberId} not found.");
             }
             member.UpdateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo,request.DOB, request.ImageFile, request.IsActive);
             
             await _memberRepository.UpdateAsync(member);
+            await _memberRepository.SaveChangeAsync();
 
             return request.MemberId;
         }

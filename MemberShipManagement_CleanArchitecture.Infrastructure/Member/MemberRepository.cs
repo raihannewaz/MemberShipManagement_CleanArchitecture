@@ -1,4 +1,6 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+﻿using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
+using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
+using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +39,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
                     throw new ArgumentException("Invalid image file format. Please upload a JPG or PNG file.");
                 }
 
-                member.ProfileImageUrl = await UploadImageAsync(member.ImageFile);
+                string url = await UploadImageAsync(member.ImageFile);
+                member.PhotoUrl(url);
 
 
             }
@@ -53,15 +57,25 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Domain.MemberEntity.Member> GetById(int id)
+        public async Task<Domain.MemberEntity.Member> GetById(int a)
+        {
+            return await _context.Members.FirstOrDefaultAsync(m => m.MemberId == a);
+        }
+
+        public async Task<IEnumerable<Domain.MemberEntity.Member>> GetByIdSql(string a)
         {
             using (var conn = _dapperDbContext.CreateConnection())
             {
-                var sq = $"SELECT * FROM Members WHERE MemberId = {id}";
+                var data = await conn.QueryMultipleAsync(a);
 
-                var data = await conn.QueryFirstOrDefaultAsync<Domain.MemberEntity.Member>(sq);
+                var member = await data.ReadSingleAsync<Domain.MemberEntity.Member>();
+                var doc = await data.ReadAsync<Domain.DocumentEntity.Document>();
+                var address = await data.ReadAsync<Domain.AddressEntity.Address>();
 
-                return data;
+                member.Document = doc.ToList();
+                member.Address = address.ToList();
+                
+                return new List<Domain.MemberEntity.Member> { member};
             }
         }
 
@@ -83,12 +97,11 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
                         File.Delete(existingPhotoPath);
                     }
                 }
-
-                member.ProfileImageUrl = await UploadImageAsync(member.ImageFile);
+                var url = await UploadImageAsync(member.ImageFile);
+                member.PhotoUrl(url);
 
             }
             _context.Entry(member).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
         }
 
 

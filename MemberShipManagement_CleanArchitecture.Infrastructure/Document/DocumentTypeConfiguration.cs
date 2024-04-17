@@ -13,6 +13,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
     {
         public void Configure(EntityTypeBuilder<Domain.DocumentEntity.Document> builder)
         {
+
+            builder.ToTable("Documents");
+
             builder.HasKey(d => d.DocumentId);
             builder.Property(d => d.DocumentId).UseIdentityColumn();
 

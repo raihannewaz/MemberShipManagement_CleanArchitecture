@@ -1,6 +1,8 @@
 ﻿
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Validation;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validation;
@@ -24,6 +26,7 @@ namespace MemberShipManagement_CleanArchitecture.Application
             services.AddFluentValidationAutoValidation();
             services.AddScoped<IValidator<CreateMemberCommand>, CreateMemberCommandValidation>();
             services.AddScoped<IValidator<UpdateMemberCommand>, UpdateMemberCommandValidation>();
+            services.AddScoped<IValidator<CreateAddressCommand>, CreateAddressCommandValidation>();
 
 
             return services;

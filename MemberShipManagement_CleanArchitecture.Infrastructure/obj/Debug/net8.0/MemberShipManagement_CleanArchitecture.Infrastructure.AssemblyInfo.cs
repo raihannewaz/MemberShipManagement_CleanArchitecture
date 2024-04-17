@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MemberShipManagement_CleanArchitecture.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8304c55ae19482f7187f36f4a2e4efb0b0454476")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cb4b50c576a210e6df94a1a39790b296c2ee616")]
 [assembly: System.Reflection.AssemblyProductAttribute("MemberShipManagement_CleanArchitecture.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MemberShipManagement_CleanArchitecture.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
