@@ -14,7 +14,14 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
     {
         public void Configure(EntityTypeBuilder<Domain.PaymentEntity.Payment> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Payments");
+
+            builder.HasKey(p => p.PaymentId);
+            builder.Property(p => p.PaymentId).UseIdentityColumn();
+
+            builder.HasOne(p => p.Membership).WithMany(m=>m.Payment).HasForeignKey(m=>m.MembershipId);
+
+            builder.Property(p => p.PaidAmmount).IsRequired();
         }
     }
 }

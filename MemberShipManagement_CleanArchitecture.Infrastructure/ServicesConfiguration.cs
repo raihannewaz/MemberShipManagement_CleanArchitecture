@@ -14,6 +14,12 @@ using System.Threading.Tasks;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Address;
 using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Document;
+using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Package;
+using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Membership;
+using MemberShipManagement_CleanArchitecture.Domain.PaymentEntity;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Payment;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure
 {
@@ -32,6 +38,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
             services.AddScoped(typeof(IMemberRepository), typeof(MemberRepository));
             services.AddScoped(typeof(IAddressRepository), typeof(AddressRepository));
             services.AddScoped(typeof(IDocumentRepository), typeof(DocumentRepository));
+            services.AddScoped(typeof(IPackageRepository), typeof(PackageRepository));
+            services.AddScoped(typeof(IMembershipRepository), typeof(MembershipRepository));
+            services.AddScoped(typeof(IPaymentRepository), typeof(PaymentRepository));
 
             return services;
         }

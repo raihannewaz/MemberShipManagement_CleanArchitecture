@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.Document.Command.CreateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.DocumentCQRS.Command.CreateCommand
 {
-    internal sealed class CreateDocumentCommandHandler : IRequestHandler<CreateDocumentCommand, Domain.DocumentEntity.Document>
+    internal sealed class CreateDocumentCommandHandler : IRequestHandler<CreateDocumentCommand, Document>
     {
         private readonly IDocumentRepository _docRepo;
 
@@ -17,11 +17,11 @@ namespace MemberShipManagement_CleanArchitecture.Application.Document.Command.Cr
             _docRepo = documentRepository;
         }
 
-        public async Task<Domain.DocumentEntity.Document> Handle(CreateDocumentCommand request, CancellationToken cancellationToken)
+        public async Task<Document> Handle(CreateDocumentCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var data = Domain.DocumentEntity.Document.CreateDoc(request.DocumentType, request.FileType, request.MemberId);
+                var data = Document.CreateDoc(request.DocumentType, request.FileType, request.MemberId);
                 await _docRepo.CreateAync(data);
                 await _docRepo.SaveChangeAsync();
                 return data;

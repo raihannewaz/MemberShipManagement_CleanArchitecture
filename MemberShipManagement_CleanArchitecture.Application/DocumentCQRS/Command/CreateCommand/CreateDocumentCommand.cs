@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.Document.Command.CreateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.DocumentCQRS.Command.CreateCommand
 {
-    public class CreateDocumentCommand :  IRequest<Domain.DocumentEntity.Document>
+    public class CreateDocumentCommand :  IRequest<Document>
     {
 
         public string? DocumentType { get;  set; }

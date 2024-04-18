@@ -6,6 +6,8 @@ using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Validation;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Validation;
+using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Validation;
 using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,7 @@ namespace MemberShipManagement_CleanArchitecture.Application
             services.AddScoped<IValidator<CreateMemberCommand>, CreateMemberCommandValidation>();
             services.AddScoped<IValidator<UpdateMemberCommand>, UpdateMemberCommandValidation>();
             services.AddScoped<IValidator<CreateAddressCommand>, CreateAddressCommandValidation>();
+            services.AddScoped<IValidator<CreateMembershipCommand>, CreateMembershipCommandValidation>();
 
 
             return services;

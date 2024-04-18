@@ -1,5 +1,6 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
 using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
+using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         public bool? IsActive { get; set; }
         public List<Document>? Document { get; set; }
         public List<Address>? Address { get; set; }
+        public List<Membership>? Membership { get; set; }
 
         [NotMapped]
         [JsonIgnore]

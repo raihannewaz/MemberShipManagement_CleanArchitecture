@@ -13,7 +13,15 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Package
     {
         public void Configure(EntityTypeBuilder<Domain.PackageEntity.Package> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Packages");
+
+            builder.HasKey(p => p.PackageId);
+            builder.Property(p => p.PackageId).UseIdentityColumn();
+
+            builder.Property(p => p.PackageName).IsRequired().HasMaxLength(30);
+            builder.Property(p => p.PackageType).IsRequired().HasMaxLength(20);
+            builder.Property(p => p.Duration).IsRequired();
+            builder.Property(p => p.PackagePrice).IsRequired();
         }
     }
 }

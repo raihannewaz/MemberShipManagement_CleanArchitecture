@@ -1,7 +1,7 @@
 ﻿using Asp.Versioning;
 using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.Document.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.DocumentCQRS.Command.CreateCommand;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

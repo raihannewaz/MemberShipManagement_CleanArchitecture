@@ -51,10 +51,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             return member;
         }
 
-        public async Task DeleteAsync(Domain.MemberEntity.Member member)
+        public Task DeleteAsync(Domain.MemberEntity.Member member)
         {
              _context.Members.Remove(member);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task<Domain.MemberEntity.Member> GetById(int a)
@@ -103,7 +103,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             }
             _context.Entry(member).State = EntityState.Modified;
         }
-
 
 
 

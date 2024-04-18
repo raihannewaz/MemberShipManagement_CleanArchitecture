@@ -29,8 +29,9 @@ CREATE TABLE Addresses (
     MemberId int FOREIGN KEY REFERENCES Members(MemberId)
 );
 Go
+Insert into Addresses Values('rn','16, nn','ctg','ctg','ctg','1211','aa',1)
 
-SELECT * From Addresses
+
 
 CREATE TABLE Document (
     DocumentId INT PRIMARY KEY Identity(1,1),
@@ -41,10 +42,38 @@ CREATE TABLE Document (
 Go
 
 
+create table Packages(
+PackageId int Primary key identity(1,1),
+PackageName varchar(30),
+PackageType Varchar(20),
+Duration int,
+PackagePrice decimal,
+IsActive bit
+)
+GO
+
+
+
+create table Memberships (
+MembershipId int primary key identity(1,1),
+MemberId int Foreign key references Members(MemberId),
+PackageId int foreign key references Packages(PackageId),
+StartDate date,
+EndDate date,
+Quantity int,
+TotalInstallment int,
+InstallmentAmount decimal(18,2)
+)
+GO
+
 
 
 
 
 select* from Members
+SELECT * From Addresses
+select * from Documents
+select * from Packages
+select * from Memberships
 
-Insert into members Values('rn','nn','da@c.com','01524215321','1996-02-05','',GETDATE(),0)
+
