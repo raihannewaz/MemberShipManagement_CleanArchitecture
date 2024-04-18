@@ -66,7 +66,14 @@ InstallmentAmount decimal(18,2)
 )
 GO
 
-
+create table Payments(
+PaymentId int primary key identity(1,1),
+MembershipId int foreign key references Memberships(MembershipId),
+PaymentDate Datetime,
+AdvanceInstallMent int,
+PaidAmmount decimal
+)
+go
 
 
 
@@ -75,5 +82,6 @@ SELECT * From Addresses
 select * from Documents
 select * from Packages
 select * from Memberships
+select * from Payments
 
 
