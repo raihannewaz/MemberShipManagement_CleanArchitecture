@@ -78,6 +78,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         }
 
 
+        public void DueDateCalculate(DateTime end)
+        {
+            EndDate = end;
+        }
+
     }
 
 

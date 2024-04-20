@@ -3,8 +3,11 @@ using FluentValidation.AspNetCore;
 using MemberShipManagement_CleanArchitecture.Application;
 using MemberShipManagement_CleanArchitecture.Infrastructure;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 namespace MemberShipManagement_CleanArchitecture.Api
@@ -22,12 +25,10 @@ namespace MemberShipManagement_CleanArchitecture.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-         
-
+       
             //layers
             builder.Services.AddApplication();
             builder.Services.AddInfrastructure(builder.Configuration);
-
 
 
             //api versioning
@@ -50,7 +51,20 @@ namespace MemberShipManagement_CleanArchitecture.Api
 
 
 
+            //jwt token
 
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(o =>
+                {
+                    o.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:Key"])),
+                        ValidIssuer = builder.Configuration["Token:Issuer"],
+                        ValidateIssuer = true,
+                        ValidateAudience = false
+                    };
+                });
 
 
 

@@ -13,6 +13,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.PaymentCQRS.Command
     {
 
         public int MembershipId { get; set; }
+        public int AdvanceInstallMent { get;  set; }
         public decimal PaidAmmount { get;  set; }
 
     }

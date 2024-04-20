@@ -16,7 +16,8 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
         {
             return @$"SELECT * FROM Members where MemberId = {id}
                       SELECT * From Documents where MemberId = {id}
-                      SELECT * From Addresses where MemberId = {id}";
+                      SELECT * From Addresses where MemberId = {id};
+                      SELECT * From Memberships where MemberId = {id}";
         }
     }
 

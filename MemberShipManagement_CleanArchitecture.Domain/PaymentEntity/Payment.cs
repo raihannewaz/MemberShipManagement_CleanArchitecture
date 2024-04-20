@@ -25,15 +25,16 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
 
         private Payment() { }
 
-        private Payment (int membershipId, decimal paidAmmount)
+        private Payment (int membershipId, int adv, decimal paidAmmount)
         {
             MembershipId = membershipId;
             PaidAmmount = paidAmmount;
+            AdvanceInstallMent = adv;
         }
 
-        public static Payment CreatePayment(int membershipId, decimal paidAmmount)
+        public static Payment CreatePayment(int membershipId,int adv, decimal paidAmmount)
         {
-            return new Payment(membershipId, paidAmmount);
+            return new Payment(membershipId, adv, paidAmmount);
         }
 
         public void AutoSetPaymentDate(DateTime date)
@@ -41,9 +42,5 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
             PaymentDate = date;
         }
 
-        public void AutoSetAdvancePay(int advPay)
-        {
-            AdvanceInstallMent = advPay;
-        }
     }
 }

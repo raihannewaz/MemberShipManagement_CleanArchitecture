@@ -29,7 +29,6 @@
     <Folder Include="MembershipCQRS\Query\" />
     <Folder Include="PaymentCQRS\Command\DeleteCommand\" />
     <Folder Include="PaymentCQRS\Command\UpdateCommand\" />
-    <Folder Include="PaymentCQRS\Query\" />
   </ItemGroup>
 
 </Project>

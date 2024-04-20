@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command.UpdateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.UpdateCommand
 {
     internal sealed class UpdatePackageCommandHandler : IRequestHandler<UpdatePackageCommand, int>
     {

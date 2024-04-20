@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command.DeleteCommand
+namespace MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.DeleteCommand
 {
     internal sealed class DeletePackageCommandHandler : IRequestHandler<DeletePackageCommand, int>
     {
@@ -19,9 +19,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command
 
         public async Task<int> Handle(DeletePackageCommand request, CancellationToken cancellationToken)
         {
-            var pack= await _packageRepository.GetById (request.PackageId);
+            var pack = await _packageRepository.GetById(request.PackageId);
 
-            await _packageRepository.DeleteAsync (pack);
+            await _packageRepository.DeleteAsync(pack);
             await _packageRepository.SaveChangeAsync();
             return request.PackageId;
         }

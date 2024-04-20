@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command.CreateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.CreateCommand
 {
     internal sealed class CreatePackageCommandHandler : IRequestHandler<CreatePackageCommand, Package>
     {

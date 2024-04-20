@@ -62,10 +62,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
             return Task.CompletedTask;
         }
 
-        public Task<IEnumerable<Domain.MembershipEntity.Membership>> GetAllAsync(string a)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public async Task<Domain.MembershipEntity.Membership> GetById(int a)
         {
@@ -77,9 +74,20 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAsync(Domain.MembershipEntity.Membership membership)
+
+
+        public async Task<List<Domain.MembershipEntity.Membership>> GetDueMemberPackagesAsync()
         {
-            throw new NotImplementedException();
+
+            var currentDate = DateTime.Now;
+
+            var dueMemberPackages = await _context.Memberships
+                .Include(mp => mp.Package)
+                .Where(mp => mp.EndDate < currentDate && !_context.Payments.Any(p => p.MembershipId == mp.MembershipId && p.PaymentDate.Date == currentDate.Date))
+                .ToListAsync();
+
+            return dueMemberPackages;
+
         }
     }
 }

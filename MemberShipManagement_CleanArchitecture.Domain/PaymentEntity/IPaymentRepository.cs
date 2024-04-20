@@ -1,4 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
         Task<Payment> CreateAsync(Payment payment);
         Task UpdateAsync(Payment payment);
         Task DeleteAsync(Payment payment);
-        Task<IEnumerable<Payment>> GetByIdSql(string a);
         Task<Payment> GetById(int a);
-
+        Task<IEnumerable<Payment>> GetAllAsync(string a);
         Task SaveChangeAsync();
     }
 }

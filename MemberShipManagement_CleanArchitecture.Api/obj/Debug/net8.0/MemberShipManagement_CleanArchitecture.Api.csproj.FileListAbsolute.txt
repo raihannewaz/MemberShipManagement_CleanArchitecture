@@ -257,3 +257,4 @@ D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\refi
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.pdb
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.genruntimeconfig.cache
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\ref\MemberShipManagement_CleanArchitecture.Api.dll
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

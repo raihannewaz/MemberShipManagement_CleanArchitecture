@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Dapper;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
 {
@@ -39,9 +41,13 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
             {
                 installmentMinus = membership.TotalInstallment - 1;
             }
-            else if (payment.PaidAmmount > membership.InstallmentAmount)
+            //else if (payment.PaidAmmount > membership.InstallmentAmount)
+            //{
+            //    installmentMinus = (membership.TotalInstallment * (int)membership.InstallmentAmount - (int)payment.PaidAmmount) / 100 ;
+            //}
+            else if (payment.AdvanceInstallMent >=2)
             {
-                installmentMinus = (membership.TotalInstallment * (int)membership.InstallmentAmount - (int)payment.PaidAmmount) / 100 ;
+                installmentMinus = (membership.TotalInstallment - 1) - payment.AdvanceInstallMent;
             }
 
             membership.InstallmentCalculateWithPayment(installmentMinus);
@@ -55,9 +61,19 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
             throw new NotImplementedException();
         }
 
-        public Task<Domain.PaymentEntity.Payment> GetById(int a)
+        public async Task<IEnumerable<Domain.PaymentEntity.Payment>> GetAllAsync(string a)
         {
-            throw new NotImplementedException();
+            using (var con = _dapperDbContext.CreateConnection())
+            {
+                var result = await con.QueryAsync<Domain.PaymentEntity.Payment>(a);
+
+                return result.ToList();
+            }
+        }
+
+        public async Task<Domain.PaymentEntity.Payment> GetById(int a)
+        {
+            return await _context.Payments.FirstOrDefaultAsync(p=>p.PaymentId==a);
         }
 
         public Task<IEnumerable<Domain.PaymentEntity.Payment>> GetByIdSql(string a)

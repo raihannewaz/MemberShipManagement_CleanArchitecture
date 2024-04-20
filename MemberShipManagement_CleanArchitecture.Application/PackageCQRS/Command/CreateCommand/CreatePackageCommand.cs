@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command.CreateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.CreateCommand
 {
-    public class CreatePackageCommand: IRequest<Package>
+    public class CreatePackageCommand : IRequest<Package>
     {
-        public string? PackageName { get;  set; }
-        public string? PackageType { get;  set; }
-        public int Duration { get;  set; }
-        public decimal PackagePrice { get;  set; }
-        public bool IsActive { get;  set; }
+        public string? PackageName { get; set; }
+        public string? PackageType { get; set; }
+        public int Duration { get; set; }
+        public decimal PackagePrice { get; set; }
+        public bool IsActive { get; set; }
     }
 }

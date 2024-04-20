@@ -71,9 +71,11 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
                 var member = await data.ReadSingleAsync<Domain.MemberEntity.Member>();
                 var doc = await data.ReadAsync<Domain.DocumentEntity.Document>();
                 var address = await data.ReadAsync<Domain.AddressEntity.Address>();
+                var membership = await data.ReadAsync<Domain.MembershipEntity.Membership>();
 
                 member.Document = doc.ToList();
                 member.Address = address.ToList();
+                member.Membership = membership.ToList();
                 
                 return new List<Domain.MemberEntity.Member> { member};
             }

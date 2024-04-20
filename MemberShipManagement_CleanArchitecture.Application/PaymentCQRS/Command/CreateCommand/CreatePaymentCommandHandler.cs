@@ -19,7 +19,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.PaymentCQRS.Command
 
         public async Task<Payment> Handle(CreatePaymentCommand request, CancellationToken cancellationToken)
         {
-            var data = Payment.CreatePayment(request.MembershipId, request.PaidAmmount);
+            var data = Payment.CreatePayment(request.MembershipId,request.AdvanceInstallMent, request.PaidAmmount);
             await _paymentRepository.CreateAsync(data);
             await _paymentRepository.SaveChangeAsync();
             return data;

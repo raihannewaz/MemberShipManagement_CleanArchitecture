@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Command.UpdateCommand
+namespace MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.UpdateCommand
 {
-    public class UpdatePackageCommand: IRequest<int>
+    public class UpdatePackageCommand : IRequest<int>
     {
         public int PackageId { get; set; }
         public string? PackageName { get; set; }
