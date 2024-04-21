@@ -17,13 +17,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
         public decimal Amount { get; private set; }
 
 
-        private DuePayment() { }
-
-
         public void AddDue(int membershipId, DateTime dueDate, decimal amount)
         {
             MembershipId = membershipId;
             DueDate = dueDate;
+            Amount = amount;
+        }
+
+        public void UpdateDue(decimal amount)
+        {
             Amount = amount;
         }
     }

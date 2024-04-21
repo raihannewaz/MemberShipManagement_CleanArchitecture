@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Domain.AppUserEntity
@@ -10,15 +11,24 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AppUserEntity
     public class AppUser
     {
 
-        public string? UserName { get; } = "admin";
-        public string? Password { get; } = "admin123";
+        public string? UserName {  get; set; }
+        public string? Password {  get; set; }
+
 
         private AppUser() { }
 
         public AppUser(string userName, string pass)
         {
-            UserName = userName;
-            Password = pass;
+            if (userName == "admin" && pass == "admin123")
+            {
+                UserName = userName;
+                Password = pass;
+            }
+            else
+            {
+                throw new ArgumentException("not matched");
+            }
+
         }
 
         public static AppUser LoginDetails(string user, string pass)

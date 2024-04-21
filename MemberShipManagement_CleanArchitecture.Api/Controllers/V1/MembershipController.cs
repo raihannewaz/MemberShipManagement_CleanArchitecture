@@ -2,6 +2,8 @@
 using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Command.DeleteCommand;
+using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Query;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,6 +34,18 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         {
             await _sender.Send(new DeleteMembershipCommand { MembershipId = id });
             return Ok("Deleted!");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var query = new MembershipQueries()
+            {
+                Query = "allMembership"
+            };
+            var data = await _sender.Send(query);
+
+            return Ok(data);
         }
     }
 }

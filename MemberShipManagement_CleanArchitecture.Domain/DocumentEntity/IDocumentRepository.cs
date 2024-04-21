@@ -11,9 +11,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
     {
         Task<Document> CreateAync(Document a);
         Task UpdateAsync(Document a);
-        Task DeleteAsync(Document a);
 
-        Task<Document> GetById(int id);
+        Task<Document> GetById(int id, string type);
         Task SaveChangeAsync();
     }
 }

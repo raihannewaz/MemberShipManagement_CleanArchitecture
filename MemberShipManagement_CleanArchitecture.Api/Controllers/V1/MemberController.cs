@@ -4,12 +4,14 @@ using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.Crea
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 {
+    [Authorize]
     [ApiVersion(1)]
     [Route("api/[controller]")]
     [ApiController]

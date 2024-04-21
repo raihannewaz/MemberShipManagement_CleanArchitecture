@@ -75,7 +75,14 @@ PaidAmmount decimal
 )
 go
 
+create table DuePayments(
+DuePaymentId int primary key identity(1,1),
+MembershipId int foreign key references Memberships(MembershipId),
+DueDate datetime,
+Amount decimal
+)
 
+go
 
 select* from Members
 SELECT * From Addresses

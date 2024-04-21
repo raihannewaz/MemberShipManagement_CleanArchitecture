@@ -8,6 +8,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
 {
     public interface IDuePaymentRepository
     {
-        Task HandleDuePayments(DuePayment duePayment);
+        Task HandleDuePayments();
     }
 }

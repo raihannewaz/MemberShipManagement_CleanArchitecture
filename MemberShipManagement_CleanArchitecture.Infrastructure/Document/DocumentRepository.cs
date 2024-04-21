@@ -17,11 +17,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
     internal class DocumentRepository : IDocumentRepository
     {
         private readonly IWebHostEnvironment _webHost;
-        private readonly DapperDbContext _dapperDbContext;
         private readonly ApplicationDbContext _context;
-        public DocumentRepository( DapperDbContext dapperDb, ApplicationDbContext dbContext, IWebHostEnvironment webHost)
+
+        public DocumentRepository(ApplicationDbContext dbContext, IWebHostEnvironment webHost)
         {
-            _dapperDbContext = dapperDb;
             _context = dbContext;
             _webHost = webHost;
         }
@@ -44,14 +43,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
             return a;
         }
 
-        public Task DeleteAsync(Domain.DocumentEntity.Document a)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<Domain.DocumentEntity.Document> GetById(int id)
+        public async Task<Domain.DocumentEntity.Document> GetById(int id, string type)
         {
-            throw new NotImplementedException();
+            return await _context.Documents.FirstOrDefaultAsync(d=>d.MemberId ==  id && d.DocumentType == type);
         }
 
         public async Task SaveChangeAsync()

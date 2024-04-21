@@ -24,6 +24,7 @@ using MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Services.JWT_Services;
 using MemberShipManagement_CleanArchitecture.Domain.ServicesInterfaces;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Services.AutoUpdate_Service;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure
 {
@@ -36,6 +37,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
              options.UseSqlServer(configuration.GetConnectionString("DbCon")));
 
+            services.AddHostedService<DuePaymentCheckService>();
 
             services.AddTransient<DapperDbContext>();
 

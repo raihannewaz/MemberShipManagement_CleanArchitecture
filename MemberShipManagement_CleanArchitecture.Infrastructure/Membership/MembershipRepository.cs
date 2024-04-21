@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MemberShipManagement_CleanArchitecture.Domain.PaymentEntity;
+using static System.Net.Mime.MediaTypeNames;
+using Dapper;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
 {
@@ -78,7 +81,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
 
         public async Task<List<Domain.MembershipEntity.Membership>> GetDueMemberPackagesAsync()
         {
-
             var currentDate = DateTime.Now;
 
             var dueMemberPackages = await _context.Memberships
@@ -87,7 +89,19 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
                 .ToListAsync();
 
             return dueMemberPackages;
+        }
 
+
+
+        public async Task<IEnumerable<Domain.MembershipEntity.Membership>> GetAllAsync(string a)
+        {
+            using (var conn = _dapperDbContext.CreateConnection())
+            {
+                var request = await conn.QueryMultipleAsync(a);
+
+                var memberships = await request.ReadAsync<Domain.MembershipEntity.Membership>();
+                return memberships;
+            }
         }
     }
 }

@@ -38,9 +38,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Package
         {
             using (var con = _dapperDbContext.CreateConnection())
             {
-                var result = await con.QueryAsync<Domain.PackageEntity.Package>(a);
+                var result = await con.QueryMultipleAsync(a);
 
-                return result.ToList();
+                var pack = await result.ReadAsync<Domain.PackageEntity.Package>();
+                return pack;
             }
         }
 

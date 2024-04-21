@@ -40,18 +40,13 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
         }
 
 
-        //public void UpdateDoc(string type, IFormFile file)
-        //{
-        //    if (type != null)
-        //    {
-        //        DocumentType = type;
-        //    }
-        //    if (file != null)
-        //    {
-        //        FileType = file;
-        //    }
-
-        //}
+        public void UpdateDoc(IFormFile file)
+        {
+            if (file != null)
+            {
+                FileType = file;
+            }
+        }
 
 
         public void FileUrl(string a)

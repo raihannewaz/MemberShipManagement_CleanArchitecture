@@ -20,13 +20,11 @@
     <Folder Include="AddressCQRS\Command\DeleteCommand\" />
     <Folder Include="AddressCQRS\Query\" />
     <Folder Include="DocumentCQRS\Command\DeleteCommand\" />
-    <Folder Include="DocumentCQRS\Command\UpdateCommand\" />
     <Folder Include="DocumentCQRS\Query\" />
     <Folder Include="DuePayment\Command\CreateCommand\" />
     <Folder Include="DuePayment\Command\DeleteCommand\" />
     <Folder Include="DuePayment\Command\UpdateCommand\" />
     <Folder Include="DuePayment\Query\" />
-    <Folder Include="MembershipCQRS\Query\" />
     <Folder Include="PaymentCQRS\Command\DeleteCommand\" />
     <Folder Include="PaymentCQRS\Command\UpdateCommand\" />
   </ItemGroup>

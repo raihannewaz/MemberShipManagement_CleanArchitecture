@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Dapper;
+using static Dapper.SqlMapper;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
 {
@@ -41,10 +42,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
             {
                 installmentMinus = membership.TotalInstallment - 1;
             }
-            //else if (payment.PaidAmmount > membership.InstallmentAmount)
-            //{
-            //    installmentMinus = (membership.TotalInstallment * (int)membership.InstallmentAmount - (int)payment.PaidAmmount) / 100 ;
-            //}
+
             else if (payment.AdvanceInstallMent >=2)
             {
                 installmentMinus = (membership.TotalInstallment - 1) - payment.AdvanceInstallMent;
@@ -52,9 +50,51 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
 
             membership.InstallmentCalculateWithPayment(installmentMinus);
 
+            var duePayment = await _context.DuePayments.FirstOrDefaultAsync(dp => dp.MembershipId == payment.MembershipId);
+            if (duePayment != null)
+            {
+
+                UpdateDuePayment(duePayment, (decimal)payment.PaidAmmount);
+
+                AdjustMemberPackageEndDate(membership, (decimal)payment.PaidAmmount);
+            }
+
+
 
             return payment;
         }
+
+        private void UpdateDuePayment(Domain.DuePaymentEntity.DuePayment duePayment, decimal actualAmount)
+        {
+
+            decimal remainingDue = (decimal)(duePayment.Amount - actualAmount);
+            if (remainingDue <= 0)
+            {
+                _context.DuePayments.Remove(duePayment);
+            }
+            else
+            {
+
+                decimal due = remainingDue;
+                duePayment.UpdateDue(due);
+            }
+        }
+
+        private void AdjustMemberPackageEndDate(Domain.MembershipEntity.Membership membership, decimal actualAmount)
+        {
+
+            double remainingDuration = (double)(actualAmount / membership.Package.PackagePrice);
+
+            DateTime a = membership.EndDate.Value.AddDays(remainingDuration);
+            membership.DueDateCalculate(a);
+        }
+
+
+
+
+
+
+
 
         public Task DeleteAsync(Domain.PaymentEntity.Payment payment)
         {
@@ -91,5 +131,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
         {
             throw new NotImplementedException();
         }
+
+
+
     }
 }
