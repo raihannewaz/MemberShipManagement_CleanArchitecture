@@ -21,10 +21,9 @@
     <Folder Include="AddressCQRS\Query\" />
     <Folder Include="DocumentCQRS\Command\DeleteCommand\" />
     <Folder Include="DocumentCQRS\Query\" />
-    <Folder Include="DuePayment\Command\CreateCommand\" />
-    <Folder Include="DuePayment\Command\DeleteCommand\" />
-    <Folder Include="DuePayment\Command\UpdateCommand\" />
-    <Folder Include="DuePayment\Query\" />
+    <Folder Include="DuePaymentCQRS\Command\CreateCommand\" />
+    <Folder Include="DuePaymentCQRS\Command\DeleteCommand\" />
+    <Folder Include="DuePaymentCQRS\Command\UpdateCommand\" />
     <Folder Include="PaymentCQRS\Command\DeleteCommand\" />
     <Folder Include="PaymentCQRS\Command\UpdateCommand\" />
   </ItemGroup>

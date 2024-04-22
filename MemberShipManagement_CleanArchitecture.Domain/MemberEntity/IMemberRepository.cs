@@ -14,7 +14,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         Task DeleteAsync(Member member);
         Task<IEnumerable<Member>> GetByIdSql(string a);
         Task<Member> GetById(int a);
-
+        Task<IReadOnlyList<Member>> GetAllAsync(string a);
         Task SaveChangeAsync();
     }
 }

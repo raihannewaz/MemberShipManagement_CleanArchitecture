@@ -56,9 +56,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
 
                 UpdateDuePayment(duePayment, (decimal)payment.PaidAmmount);
 
-                AdjustMemberPackageEndDate(membership, (decimal)payment.PaidAmmount);
+                AdjustMembershipEndDate(membership, (decimal)payment.PaidAmmount);
             }
-
 
 
             return payment;
@@ -80,7 +79,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
             }
         }
 
-        private void AdjustMemberPackageEndDate(Domain.MembershipEntity.Membership membership, decimal actualAmount)
+        private void AdjustMembershipEndDate(Domain.MembershipEntity.Membership membership, decimal actualAmount)
         {
 
             double remainingDuration = (double)(actualAmount / membership.Package.PackagePrice);
@@ -93,13 +92,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
 
 
 
-
-
-
-        public Task DeleteAsync(Domain.PaymentEntity.Payment payment)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<IEnumerable<Domain.PaymentEntity.Payment>> GetAllAsync(string a)
         {

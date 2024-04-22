@@ -57,6 +57,18 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             return Task.CompletedTask;
         }
 
+        public async Task<IReadOnlyList<Domain.MemberEntity.Member>> GetAllAsync(string a)
+        {
+            using (var conn =  _dapperDbContext.CreateConnection())
+            {
+                var result = await conn.QueryMultipleAsync(a);
+
+                var members = await result.ReadAsync<Domain.MemberEntity.Member>();
+                
+                return members.ToList();
+            }
+        }
+
         public async Task<Domain.MemberEntity.Member> GetById(int a)
         {
             return await _context.Members.FirstOrDefaultAsync(m => m.MemberId == a);

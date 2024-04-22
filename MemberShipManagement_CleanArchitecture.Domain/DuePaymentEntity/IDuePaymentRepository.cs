@@ -9,5 +9,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
     public interface IDuePaymentRepository
     {
         Task HandleDuePayments();
+
+        Task<IEnumerable<DuePayment>> GetDuesById(string a);
     }
 }

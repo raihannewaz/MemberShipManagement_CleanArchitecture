@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
 using static MemberShipManagement_CleanArchitecture.Domain.PackageEntity.Package;
+using Microsoft.EntityFrameworkCore;
+using Dapper;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment
 {
@@ -15,13 +17,88 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment
     {
         private readonly ApplicationDbContext _context;
         private readonly IMembershipRepository _membershipRepository;
+        private readonly DapperDbContext _dapperDbContext;
 
-        public DuePaymentRepository(ApplicationDbContext dbContext, IMembershipRepository membership)
+        public DuePaymentRepository(ApplicationDbContext dbContext, IMembershipRepository membership, DapperDbContext dapperDb)
         {
             _context = dbContext;
             _membershipRepository = membership;
+            _dapperDbContext = dapperDb;
 
         }
+
+
+        public async Task<IEnumerable<Domain.DuePaymentEntity.DuePayment>> GetDuesById(string a)
+        {
+            using (var conn = _dapperDbContext.CreateConnection())
+            {
+                var result = await conn.QueryMultipleAsync(a);
+
+                var dues = await result.ReadAsync<Domain.DuePaymentEntity.DuePayment>();
+                var memberships = await result.ReadAsync<Domain.MembershipEntity.Membership>();
+                var members = await result.ReadAsync<Domain.MemberEntity.Member>();
+                var packs = await result.ReadAsync<Domain.PackageEntity.Package>();
+
+                foreach (var due in dues)
+                {
+                    var membership = memberships.FirstOrDefault(m => m.MembershipId == due.MembershipId);
+                    if (membership != null)
+                    {
+                        var member = members.FirstOrDefault(m => m.MemberId == membership.MemberId);
+                        var package = packs.FirstOrDefault(p => p.PackageId == membership.PackageId);
+
+                        membership.Member = member;
+                        membership.Package = package;
+
+                        due.Membership = membership;
+                    }
+                }
+
+                return dues;
+            }
+        }
+
+
+
+        //public async Task<IEnumerable<Domain.DuePaymentEntity.DuePayment>> GetDuesById(string a)
+        //{
+        //    using (var conn = _dapperDbContext.CreateConnection())
+        //    {
+        //        var result = await conn.QueryMultipleAsync(a);
+
+        //        var dues = await result.ReadAsync<Domain.DuePaymentEntity.DuePayment>();
+        //        var memberships = await result.ReadAsync<Domain.MembershipEntity.Membership>();
+        //        var members = await result.ReadAsync<Domain.MemberEntity.Member>();
+        //        var packs = await result.ReadAsync<Domain.PackageEntity.Package>();
+
+        //        foreach (var due in dues)
+        //        {
+        //            var membership = memberships.FirstOrDefault(m => m.MembershipId == due.MembershipId);
+        //            if (membership != null)
+        //            {
+        //                var member = members.FirstOrDefault(m => m.MemberId == membership.MemberId);
+        //                var package = packs.FirstOrDefault(p => p.PackageId == membership.PackageId);
+
+        //                if (member != null)
+        //                {
+        //                    if (member.Membership == null)
+        //                    {
+        //                        member.Membership = new List<Domain.MembershipEntity.Membership>();
+        //                    }
+        //                    membership.Member = member;
+        //                    membership.Package = package;
+        //                    member.Membership.Add(membership);
+
+        //                }
+        //            }
+        //        }
+
+        //        return dues;
+        //    }
+        //}
+
+
+
 
 
 

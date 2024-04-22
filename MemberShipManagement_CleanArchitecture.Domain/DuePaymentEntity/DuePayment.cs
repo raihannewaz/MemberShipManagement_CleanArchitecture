@@ -1,4 +1,6 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
+﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
+using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
+using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
         public Membership? Membership{ get; set; }
         public DateTime DueDate { get; private set; }
         public decimal Amount { get; private set; }
+
+
 
 
         public void AddDue(int membershipId, DateTime dueDate, decimal amount)

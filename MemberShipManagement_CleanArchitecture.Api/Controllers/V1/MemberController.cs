@@ -4,6 +4,7 @@ using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.Crea
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Query;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 {
-    [Authorize]
+    //[Authorize]
     [ApiVersion(1)]
     [Route("api/[controller]")]
     [ApiController]
@@ -23,6 +24,19 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         {
             _sender = sender;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var query = new MemberQueries()
+            {
+                Query = "AllMembers"
+            };
+            var data = await _sender.Send(query);
+
+            return Ok(data);
+        }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)

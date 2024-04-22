@@ -17,7 +17,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AppUserEntity
 
         private AppUser() { }
 
-        public AppUser(string userName, string pass)
+        private AppUser(string userName, string pass)
         {
             if (userName == "admin" && pass == "admin123")
             {

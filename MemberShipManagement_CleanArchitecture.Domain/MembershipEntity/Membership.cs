@@ -15,11 +15,13 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         public int MembershipId { get; private set; }
 
         public int MemberId { get; private set; }
-        [JsonIgnore]
+        //[JsonIgnore]
+
         public Member? Member { get;  set; }
 
         public int PackageId { get; private set; }
-        [JsonIgnore]
+
+        //[JsonIgnore]
         public Package? Package { get;  set; }
 
         public DateTime? StartDate { get; private set; }
@@ -32,6 +34,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         public decimal InstallmentAmount { get; private set; }
 
         public List<Payment> Payment { get;  set; }
+
 
 
         private Membership() { }

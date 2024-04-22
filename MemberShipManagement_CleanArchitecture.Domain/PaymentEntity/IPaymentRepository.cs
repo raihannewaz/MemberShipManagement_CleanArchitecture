@@ -12,7 +12,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
     {
         Task<Payment> CreateAsync(Payment payment);
         Task UpdateAsync(Payment payment);
-        Task DeleteAsync(Payment payment);
         Task<Payment> GetById(int a);
         Task<IEnumerable<Payment>> GetAllAsync(string a);
         Task SaveChangeAsync();

@@ -27,6 +27,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         public string? ProfileImageUrl { get; private set; }
         public DateTime AccountCreateDate { get; set; }
         public bool? IsActive { get; set; }
+
         public List<Document>? Document { get; set; }
         public List<Address>? Address { get; set; }
         public List<Membership>? Membership { get; set; }
@@ -103,5 +104,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
             ProfileImageUrl = url;
         }
 
+       
     }
 }

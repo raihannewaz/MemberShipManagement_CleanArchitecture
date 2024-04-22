@@ -10,7 +10,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
 {
     public class MemberQueries : IRequest<IEnumerable<Member>>
     {
-        public int MemberId { get; set; }
+        public int MemberId;
+
+        public string Query; 
 
         public string MemberDetails(int id)
         {
@@ -19,6 +21,8 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
                       SELECT * From Addresses where MemberId = {id};
                       SELECT * From Memberships where MemberId = {id}";
         }
+
+        public string AllMembers = "SELECT* From Members";
     }
 
 }

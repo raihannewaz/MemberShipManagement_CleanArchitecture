@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity;
 using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,18 @@ namespace MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query
 
         public async Task<IEnumerable<Member>> Handle(MemberQueries request, CancellationToken cancellationToken)
         {
-            var q = request.MemberDetails(request.MemberId);
-            var data = await _memberRepository.GetByIdSql(q);
-            return data;
+            switch (request.Query)
+            {
+                case "MemberDetails":
+                    var q = request.MemberDetails(request.MemberId);
+                    var data = await _memberRepository.GetByIdSql(q);
+                    return data;
+                case "AllMembers":
+                    var members = await _memberRepository.GetAllAsync(request.AllMembers);
+                    return members;
+                default:
+                    throw new ArgumentException("Invalid query.");
+            }
         }
     }
 }
