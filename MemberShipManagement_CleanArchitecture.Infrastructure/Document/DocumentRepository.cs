@@ -28,17 +28,17 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
 
         public async Task<Domain.DocumentEntity.Document> CreateAync(Domain.DocumentEntity.Document a)
         {
-            if (a.FileType != null)
-            {
-                if (!IsImageFileValid(a.FileType.FileName))
-                {
-                    throw new ArgumentException("Invalid image file format. Please upload a JPG or PNG file.");
-                }
-                string url = await UploadImageAsync(a.FileType);
-                a.FileUrl(url);
+            //if (a.FileType != null)
+            //{
+            //    if (!IsImageFileValid(a.FileType.FileName))
+            //    {
+            //        throw new ArgumentException("Invalid image file format. Please upload a JPG or PNG file.");
+            //    }
+            //    string url = await UploadImageAsync(a.FileType);
+            //    a.FileUrl(url);
 
 
-            }
+            //}
             await _context.Documents.AddAsync(a);
             return a;
         }
@@ -56,20 +56,20 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
 
         public async Task UpdateAsync(Domain.DocumentEntity.Document a)
         {
-            if (a.FileType != null)
-            {
-                if (!string.IsNullOrEmpty(a.DocumentUrl))
-                {
-                    string existingPhotoPath = a.DocumentUrl;
-                    if (File.Exists(existingPhotoPath))
-                    {
-                        File.Delete(existingPhotoPath);
-                    }
-                }
-                var url = await UploadImageAsync(a.FileType);
-                a.FileUrl(url);
+            //if (a.FileType != null)
+            //{
+            //    if (!string.IsNullOrEmpty(a.DocumentUrl))
+            //    {
+            //        string existingPhotoPath = a.DocumentUrl;
+            //        if (File.Exists(existingPhotoPath))
+            //        {
+            //            File.Delete(existingPhotoPath);
+            //        }
+            //    }
+            //    var url = await UploadImageAsync(a.FileType);
+            //    a.FileUrl(url);
 
-            }
+            //}
             _context.Entry(a).State = EntityState.Modified;
         }
 

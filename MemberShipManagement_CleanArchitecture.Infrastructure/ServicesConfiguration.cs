@@ -23,8 +23,10 @@ using MemberShipManagement_CleanArchitecture.Infrastructure.Payment;
 using MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Services.JWT_Services;
-using MemberShipManagement_CleanArchitecture.Domain.ServicesInterfaces;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Services.AutoUpdate_Service;
+using MemberShipManagement_CleanArchitecture.Domain.Services;
+using MemberShipManagement_CleanArchitecture.Application.Services;
+using MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileServices;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure
 {
@@ -39,7 +41,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
 
             services.AddHostedService<DuePaymentCheckService>();
 
-            services.AddTransient<DapperDbContext>();
+            services.AddTransient<IDapperDbContext, DapperDbContext>();
 
             services.AddScoped(typeof(IMemberRepository), typeof(MemberRepository));
             services.AddScoped(typeof(IAddressRepository), typeof(AddressRepository));
@@ -49,6 +51,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
             services.AddScoped(typeof(IPaymentRepository), typeof(PaymentRepository));
             services.AddScoped(typeof(IDuePaymentRepository), typeof(DuePaymentRepository));
             services.AddScoped(typeof(IJwtProvider), typeof(JwtProvider));
+            services.AddScoped(typeof(IFileService), typeof(FileService));
+
 
             return services;
         }

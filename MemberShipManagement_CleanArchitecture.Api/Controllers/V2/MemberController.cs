@@ -1,9 +1,6 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.Members.Query;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,18 +30,18 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V2
                 return NotFound();
             }
 
-            var result = data.Select(dto => new
-            {
-                dto.FirstName,
-                dto.LastName,
-                dto.PhoneNo,
-                dto.Email,
-                dto.AccountCreateDate,
-                dto.DOB,
-                dto.ProfileImageUrl
-            }
-            ).ToList();
-            return Ok(result);
+            //var result = data.Select(dto => new
+            //{
+            //    dto.FirstName,
+            //    dto.LastName,
+            //    dto.PhoneNo,
+            //    dto.Email,
+            //    dto.AccountCreateDate,
+            //    dto.DOB,
+            //    dto.ProfileImageUrl
+            //}
+            //).ToList();
+            return Ok(data);
         }
 
         //[HttpPost]

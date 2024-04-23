@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using MemberShipManagement_CleanArchitecture.Application.Services;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context
 {
-    public class DapperDbContext
+    public class DapperDbContext: IDapperDbContext
     {
         private readonly IConfiguration _config;
         private readonly string? _dbConString;

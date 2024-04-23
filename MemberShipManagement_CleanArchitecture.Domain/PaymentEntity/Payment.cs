@@ -12,15 +12,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
     {
         public int PaymentId { get; private set; }
 
-        public int MembershipId { get; private set; }
+        public int MembershipId { get;  set; }
         [JsonIgnore]
-        public Membership? Membership { get;  set; }
+        private Membership? Membership { get;  set; }
 
-        public DateTime PaymentDate { get; private set; }
+        public DateTime PaymentDate { get;  set; }
 
-        public int AdvanceInstallMent {  get; private set; }
+        public int AdvanceInstallMent {  get;  set; }
 
-        public decimal PaidAmmount {  get; private set; } 
+        public decimal PaidAmmount {  get;  set; } 
 
 
         private Payment() { }

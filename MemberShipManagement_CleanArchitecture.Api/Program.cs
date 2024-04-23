@@ -107,6 +107,8 @@ namespace MemberShipManagement_CleanArchitecture.Api
                 app.UseSwaggerUI();
             }
 
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseAuthentication();

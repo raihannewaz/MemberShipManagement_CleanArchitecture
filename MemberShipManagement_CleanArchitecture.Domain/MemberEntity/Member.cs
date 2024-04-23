@@ -1,6 +1,7 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
 using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
+
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -18,23 +19,20 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
     {
         public int MemberId { get; private set; }
 
-        public string? FirstName { get; private set; }
-        public string? LastName { get; private set; }
-        public string? Email { get; private set; }
-        public string? PhoneNo { get; private set; }
-        public DateTime? DOB { get; private set; }
+        private string FirstName { get;  set; }
+        private string LastName { get;  set; }
+        private string Email { get;  set; }
+        private string PhoneNo { get;  set; }
+        private DateTime DOB { get;  set; }
 
-        public string? ProfileImageUrl { get; private set; }
-        public DateTime AccountCreateDate { get; set; }
-        public bool? IsActive { get; set; }
+        private string ProfileImageUrl { get;  set; }
+        private DateTime AccountCreateDate { get; set; }
+        private bool IsActive { get; set; }
 
-        public List<Document>? Document { get; set; }
-        public List<Address>? Address { get; set; }
-        public List<Membership>? Membership { get; set; }
+        private List<Document>? Document { get; set; }
+        private List<Address>? Address { get; set; }
+        private List<Membership>? Membership { get; set; }
 
-        [NotMapped]
-        [JsonIgnore]
-        public IFormFile? ImageFile { get; set; }
 
 
         private Member()
@@ -42,29 +40,30 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
         }
 
+      
 
-
-        private Member(string fName, string lName, string email, string phone, DateTime dob, IFormFile file)
+        private Member(string fName, string lName, string email, string phone, DateTime dob)
         {
             FirstName = fName;
             LastName = lName;
             Email = email;
             PhoneNo = phone;
             DOB = dob;
-            ImageFile = file;
+            AccountCreateDate = DateTime.Now;
+            IsActive = true;
         }
 
 
 
 
-        public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file)
+        public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob)
         {
-            return new Member(fName, lName, email, phone, dob, file);
+            return new Member(fName, lName, email, phone, dob);
         }
 
 
 
-        public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, IFormFile file, bool isactive)
+        public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, bool isactive)
         {
             if (fName != null)
             {
@@ -88,10 +87,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
                 DOB = dob;
             }
 
-            if (file != null)
-            {
-                ImageFile = file;
-            }
             if (isactive != false || isactive != true)
             {
                 IsActive = isactive;
@@ -99,11 +94,24 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         }
 
 
-        public void PhotoUrl(string url)
+        public void  PhotoUrl(string url)
         {
             ProfileImageUrl = url;
         }
 
-       
+        public void UpdateImage(Member member)
+        {
+            if (member != null)
+            {
+                if (!string.IsNullOrEmpty(member.ProfileImageUrl))
+                {
+                    string existingPhotoPath =  member.ProfileImageUrl;
+                    if (File.Exists(existingPhotoPath))
+                    {
+                        File.Delete(existingPhotoPath);
+                    }
+                }
+            }
+        }
     }
 }

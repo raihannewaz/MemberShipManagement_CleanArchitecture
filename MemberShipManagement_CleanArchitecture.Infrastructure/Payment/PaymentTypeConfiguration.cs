@@ -19,9 +19,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Payment
             builder.HasKey(p => p.PaymentId);
             builder.Property(p => p.PaymentId).UseIdentityColumn();
 
-            builder.HasOne(p => p.Membership).WithMany(m=>m.Payment).HasForeignKey(m=>m.MembershipId);
+            builder.HasOne("Membership").WithMany("Payment").HasForeignKey("MembershipId");
 
-            builder.Property(p => p.PaidAmmount).IsRequired();
+            builder.Property<decimal>("PaidAmmount").IsRequired();
         }
     }
 }

@@ -17,12 +17,14 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             builder.HasKey(m => m.MemberId);
             builder.Property(m => m.MemberId).UseIdentityColumn();
 
-            builder.Property(m => m.FirstName).IsRequired().HasMaxLength(50);
-            builder.Property(m => m.LastName).IsRequired().HasMaxLength(50);
-            builder.Property(m => m.Email).IsRequired().HasMaxLength(100);
-            builder.Property(m => m.PhoneNo).IsRequired().HasMaxLength(11);
-            builder.Property(m => m.DOB).IsRequired();
-            builder.Property(m => m.AccountCreateDate).IsRequired();
+            builder.Property<string>("FirstName").IsRequired().HasMaxLength(50);
+            builder.Property<string>("LastName").IsRequired().HasMaxLength(50);
+            builder.Property<string>("Email").IsRequired().HasMaxLength(100);
+            builder.Property<string>("PhoneNo").IsRequired().HasMaxLength(11);
+            builder.Property<string>("ProfileImageUrl").IsRequired().HasMaxLength(11);
+            builder.Property<bool>("IsActive").IsRequired().HasMaxLength(11);
+            builder.Property<DateTime>("DOB").IsRequired();
+            builder.Property<DateTime>("AccountCreateDate").IsRequired();
 
         }
     }

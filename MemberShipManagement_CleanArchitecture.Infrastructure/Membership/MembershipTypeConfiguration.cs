@@ -19,11 +19,11 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
             builder.Property(m=>m.MembershipId).UseIdentityColumn();
 
             builder.HasOne(m=>m.Member)
-                .WithMany(m=>m.Membership)
+                .WithMany("Membership")
                 .HasForeignKey(m=>m.MemberId);
 
             builder.HasOne(m => m.Package)
-                .WithMany(m => m.Membership)
+                .WithMany("Membership")
                 .HasForeignKey(m => m.PackageId);
 
             builder.Property(m=>m.Quantity).IsRequired();

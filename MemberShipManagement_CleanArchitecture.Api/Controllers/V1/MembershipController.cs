@@ -1,11 +1,10 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Command.DeleteCommand;
-using MemberShipManagement_CleanArchitecture.Application.MembershipCQRS.Query;
-using MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Query;
-using Microsoft.AspNetCore.Http;
+using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.DeleteCommand;
+using MemberShipManagement_CleanArchitecture.Application.Memberships.Query;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 {

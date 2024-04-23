@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MemberShipManagement_CleanArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc0fcbe87a49aaa183ccf4c66d034787f72f8ed5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5da1cf12d623dbdc5df0fcef5a5f14f71c5b37ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("MemberShipManagement_CleanArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MemberShipManagement_CleanArchitecture.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

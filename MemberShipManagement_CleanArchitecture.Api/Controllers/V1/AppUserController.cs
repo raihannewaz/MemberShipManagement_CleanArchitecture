@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.AppUserCQRS.Command.LoginCommand;
+using MemberShipManagement_CleanArchitecture.Application.AppUsers.Command.LoginCommand;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

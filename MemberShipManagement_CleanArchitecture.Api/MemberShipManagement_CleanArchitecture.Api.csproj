@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\MemberImage\" />
     <Folder Include="wwwroot\DocumentsFile\" />
+    <Folder Include="wwwroot\MemberFiles\" />
   </ItemGroup>
 
 </Project>

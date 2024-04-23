@@ -1,11 +1,7 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.AddressCQRS.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.Addresses.Command.UpdateCommand;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

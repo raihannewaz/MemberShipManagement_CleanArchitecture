@@ -13,10 +13,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
     public class DuePayment
     {
         public int DuePaymentId { get; private set; }
-        public int MembershipId { get; private set; }
+        public int MembershipId { get;  set; }
         public Membership? Membership{ get; set; }
-        public DateTime DueDate { get; private set; }
-        public decimal Amount { get; private set; }
+        private DateTime DueDate { get;  set; }
+        public decimal Amount { get;  set; }
 
 
 

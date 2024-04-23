@@ -18,17 +18,17 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Address
             builder.HasKey(a => a.AddressId);
             builder.Property(a => a.AddressId).UseIdentityColumn();
 
-            builder.Property(a => a.AddressType).IsRequired().HasMaxLength(20);
-            builder.Property(a => a.HouseNo).IsRequired().HasMaxLength(100);
-            builder.Property(a => a.City).IsRequired().HasMaxLength(15);
-            builder.Property(a => a.Region).IsRequired().HasMaxLength(15);
-            builder.Property(a => a.PostOffice).IsRequired().HasMaxLength(15);
-            builder.Property(a => a.PostalCode).IsRequired().HasMaxLength(15);
-            builder.Property(a => a.Country).IsRequired().HasMaxLength(20);
+            builder.Property<string>("AddressType").IsRequired().HasMaxLength(20);
+            builder.Property<string>("HouseNo").IsRequired().HasMaxLength(100);
+            builder.Property<string>("City").IsRequired().HasMaxLength(15);
+            builder.Property<string>("Region").IsRequired().HasMaxLength(15);
+            builder.Property<string>("PostOffice").IsRequired().HasMaxLength(15);
+            builder.Property<string>("PostalCode").IsRequired().HasMaxLength(15);
+            builder.Property<string>("Country").IsRequired().HasMaxLength(20);
 
-            builder.HasOne(a => a.Member)
-                   .WithMany(m => m.Address)
-                   .HasForeignKey(a => a.MemberId)
+            builder.HasOne("Member")
+                   .WithMany("Address")
+                   .HasForeignKey("MemberId")
                    .IsRequired();
         }
     }

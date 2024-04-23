@@ -19,13 +19,13 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Document
             builder.HasKey(d => d.DocumentId);
             builder.Property(d => d.DocumentId).UseIdentityColumn();
 
-            builder.Property(d => d.DocumentType).IsRequired();
+            builder.Property<string>("DocumentType").IsRequired();
 
-            builder.Property(d => d.DocumentUrl).IsRequired();
+            builder.Property<string>("DocumentUrl").IsRequired();
 
-            builder.HasOne(d => d.Member)
-                   .WithMany(m => m.Document)
-                   .HasForeignKey(d => d.MemberId)
+            builder.HasOne("Member")
+                   .WithMany("Document")
+                   .HasForeignKey("MemberId")
                    .IsRequired();
         }
     }

@@ -1,10 +1,10 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.DeleteCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.Query;
-using MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.Members.Command.DeleteCommand;
+using MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand;
+using MemberShipManagement_CleanArchitecture.Application.Members.Query;
+using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +28,8 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new MemberQueries()
-            {
-                Query = "AllMembers"
-            };
+            var query = new GetAllMembersCommand();
+
             var data = await _sender.Send(query);
 
             return Ok(data);

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
@@ -17,15 +18,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AddressCQRS\Command\DeleteCommand\" />
-    <Folder Include="AddressCQRS\Query\" />
-    <Folder Include="DocumentCQRS\Command\DeleteCommand\" />
-    <Folder Include="DocumentCQRS\Query\" />
-    <Folder Include="DuePaymentCQRS\Command\CreateCommand\" />
-    <Folder Include="DuePaymentCQRS\Command\DeleteCommand\" />
-    <Folder Include="DuePaymentCQRS\Command\UpdateCommand\" />
-    <Folder Include="PaymentCQRS\Command\DeleteCommand\" />
-    <Folder Include="PaymentCQRS\Command\UpdateCommand\" />
+    <Folder Include="Addresses\Command\DeleteCommand\" />
+    <Folder Include="Addresses\Query\GetAll\" />
+    <Folder Include="Addresses\Query\GetById\" />
+    <Folder Include="Documents\Command\DeleteCommand\" />
+    <Folder Include="Documents\Query\GetAll\" />
+    <Folder Include="Documents\Query\GetById\" />
+    <Folder Include="DuePayments\Command\CreateCommand\" />
+    <Folder Include="DuePayments\Command\DeleteCommand\" />
+    <Folder Include="DuePayments\Command\UpdateCommand\" />
+    <Folder Include="DuePayments\Query\GetAll\" />
+    <Folder Include="DuePayments\Query\GetById\" />
+    <Folder Include="Memberships\Query\GetAll\" />
+    <Folder Include="Memberships\Query\GetById\" />
+    <Folder Include="Members\Query\GetById\" />
+    <Folder Include="Packages\Query\GetAll\" />
+    <Folder Include="Packages\Query\GetById\" />
+    <Folder Include="Payments\Command\DeleteCommand\" />
+    <Folder Include="Payments\Command\UpdateCommand\" />
+    <Folder Include="Payments\Query\GetAll\" />
+    <Folder Include="Payments\Query\GetById\" />
   </ItemGroup>
 
 </Project>

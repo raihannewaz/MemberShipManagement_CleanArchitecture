@@ -1,5 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.AppUserEntity;
-using MemberShipManagement_CleanArchitecture.Domain.ServicesInterfaces;
+using MemberShipManagement_CleanArchitecture.Domain.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -27,8 +27,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.JWT_Ser
         {
             var claims = new List<Claim>()
             {
-                new Claim(JwtRegisteredClaimNames.UniqueName, appUser.UserName),
-                new Claim(JwtRegisteredClaimNames.GivenName, appUser.UserName)
+                new Claim(JwtRegisteredClaimNames.UniqueName, appUser.UserName)
             };
 
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256Signature);

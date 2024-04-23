@@ -13,15 +13,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
     public class Document
     {
         public int DocumentId { get; private set; }
-        public string? DocumentType { get; private set; }
-        public string? DocumentUrl { get; private set; }
-        
+        public string? DocumentType { get;  set; }
+        private string? DocumentUrl { get;  set; }
+
         public int MemberId { get; private set; }
-        public Member? Member { get; set; }
+        private Member? Member { get; set; }
 
         [NotMapped]
         [JsonIgnore]
-        public IFormFile? FileType { get; set; }
+        private IFormFile? FileType { get; set; }
 
 
         private Document() { }

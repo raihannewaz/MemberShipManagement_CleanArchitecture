@@ -18,10 +18,10 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Package
             builder.HasKey(p => p.PackageId);
             builder.Property(p => p.PackageId).UseIdentityColumn();
 
-            builder.Property(p => p.PackageName).IsRequired().HasMaxLength(30);
-            builder.Property(p => p.PackageType).IsRequired().HasMaxLength(20);
-            builder.Property(p => p.Duration).IsRequired();
-            builder.Property(p => p.PackagePrice).IsRequired();
+            builder.Property<string>("PackageName").IsRequired().HasMaxLength(30);
+            builder.Property<string>("PackageType").IsRequired().HasMaxLength(20);
+            builder.Property<int>("Duration").IsRequired();
+            builder.Property<decimal>("PackagePrice").IsRequired();
         }
     }
 }

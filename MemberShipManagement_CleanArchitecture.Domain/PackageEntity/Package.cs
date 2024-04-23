@@ -10,11 +10,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
     public class Package
     {
         public int PackageId { get; private set; }
-        public string? PackageName { get; private set; }
-        public string? PackageType { get; private set; }
-        public int Duration { get; private set; }
-        public decimal PackagePrice { get; private set; }
-        public bool IsActive { get; private set; }
+        public string? PackageName { get;  set; }
+        public string? PackageType { get;  set; }
+        public int Duration { get;  set; }
+        public decimal PackagePrice { get;  set; }
+        public bool IsActive { get;  set; }
         public List<Membership>? Membership { get;  set; }
 
         private Package() { }

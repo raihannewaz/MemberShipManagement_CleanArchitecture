@@ -1,6 +1,6 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.DuePaymentCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.DuePayments.Query;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

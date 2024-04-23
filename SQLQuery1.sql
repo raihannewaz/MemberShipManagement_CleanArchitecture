@@ -84,11 +84,21 @@ Amount decimal
 
 go
 
-select* from Members
+SELECT* From Members
 SELECT * From Addresses
 select * from Documents
 select * from Packages
 select * from Memberships
 select * from Payments
+select * from DuePayments
 
+insert into DuePayments values(1,'2024-04-19',105),
+							(1,'2024-04-20',105),
+							(1,'2024-04-21',105)
+
+
+select m.FirstName +' '+m.LastName as MemberName, m.PhoneNo, m.DOB, p.PackageName,p.PackageType, d.DueDate, d.Amount 
+from DuePayments d join Memberships ms on ms.MembershipId = d.MembershipId 
+join Members m on m.MemberId = ms.MemberId Join Packages p on p.PackageId = ms.PackageId
+where d.MembershipId = 1
 

@@ -1,8 +1,7 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.PackageCQRS.Query;
-using MemberShipManagement_CleanArchitecture.Application.PaymentCQRS.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.PaymentCQRS.Query;
+using MemberShipManagement_CleanArchitecture.Application.Payments.Command.CreateCommand;
+using MemberShipManagement_CleanArchitecture.Application.Payments.Query;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
