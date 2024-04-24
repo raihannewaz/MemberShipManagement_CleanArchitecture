@@ -1,14 +1,10 @@
-﻿using MediatR;
+﻿
+using MediatR;
 using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand
 {
-    internal sealed class CreateAddressCommandHandler : IRequestHandler<CreateAddressCommand, Address>
+    internal sealed class CreateAddressCommandHandler : IRequestHandler<CreateAddressCommand, int>
     {
         private readonly IAddressRepository _addressRepository;
 
@@ -17,12 +13,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.C
             _addressRepository = addressRepository;
         }
 
-        public async Task<Address> Handle(CreateAddressCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateAddressCommand request, CancellationToken cancellationToken)
         {
             var data = Address.CreateAddress(request.AddressType, request.HouseNo, request.City, request.Region, request.PostOffice, request.PostalCode, request.Country, request.MemberId);
             await _addressRepository.CreateAync(data);
             await _addressRepository.SaveChangeAsync();
-            return data;
+            return 0;
         }
     }
 }

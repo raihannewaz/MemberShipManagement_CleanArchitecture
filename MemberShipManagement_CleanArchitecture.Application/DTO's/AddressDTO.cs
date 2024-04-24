@@ -1,9 +1,5 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 
 namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 {

@@ -13,10 +13,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
     public class DuePayment
     {
         public int DuePaymentId { get; private set; }
-        public int MembershipId { get;  set; }
-        public Membership? Membership{ get; set; }
-        private DateTime DueDate { get;  set; }
-        public decimal Amount { get;  set; }
+        public int MembershipId { get; set; }
+        private Membership? Membership { get; set; }
+        private DateTime DueDate { get; set; }
+        private decimal Amount { get; set; }
 
 
 
@@ -28,9 +28,16 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
             Amount = amount;
         }
 
+
         public void UpdateDue(decimal amount)
         {
             Amount = amount;
+        }
+
+
+        public decimal UpdateDuePayment(DuePayment duePayment, decimal amount)
+        {
+            return duePayment.Amount - amount;
         }
     }
 }

@@ -41,7 +41,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure
 
             services.AddHostedService<DuePaymentCheckService>();
 
-            services.AddTransient<IDapperDbContext, DapperDbContext>();
+            //services.AddTransient<IDapperDbContext, DapperDbContext>();
+            services.AddScoped(typeof(IDapperDbContext), typeof(DapperDbContext));
 
             services.AddScoped(typeof(IMemberRepository), typeof(MemberRepository));
             services.AddScoped(typeof(IAddressRepository), typeof(AddressRepository));

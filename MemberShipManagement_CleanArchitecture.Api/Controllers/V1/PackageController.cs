@@ -4,6 +4,8 @@ using MemberShipManagement_CleanArchitecture.Application.Packages.Command.Create
 using MemberShipManagement_CleanArchitecture.Application.Packages.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Query;
+using MemberShipManagement_CleanArchitecture.Application.Packages.Query.GetAll;
+using MemberShipManagement_CleanArchitecture.Application.Packages.Query.GetById;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
@@ -23,13 +25,23 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new PackageQueries()
-            {
-                Query = "AllPacks"
-            };
+            var query = new GetAllPackagesCommand();
             var data = await _sender.Send(query);
-
             return Ok(data);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var data = new GetByIdPackageCommand() {PackageId = id};
+
+            if (data == null)
+            {
+                throw new ArgumentNullException($"package with {id} not Found!");
+            }
+
+            var result = await _sender.Send(data);
+            return Ok(result);
         }
 
         [HttpPost]

@@ -3,6 +3,7 @@ using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.Memberships.Query;
+using MemberShipManagement_CleanArchitecture.Application.Memberships.Query.GetAll;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -38,10 +39,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new MembershipQueries()
-            {
-                Query = "allMembership"
-            };
+            var query = new GetAllMembershipsCommand();
             var data = await _sender.Send(query);
 
             return Ok(data);

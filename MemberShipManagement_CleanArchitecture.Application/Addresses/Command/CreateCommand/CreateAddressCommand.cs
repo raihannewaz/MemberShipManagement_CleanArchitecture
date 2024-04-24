@@ -1,14 +1,9 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using MediatR;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand
 {
-    public class CreateAddressCommand : IRequest<Address>
+    public class CreateAddressCommand : IRequest<int>
     {
         public string? AddressType { get; set; }
         public string? HouseNo { get; set; }

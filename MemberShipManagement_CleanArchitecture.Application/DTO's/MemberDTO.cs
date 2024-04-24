@@ -26,9 +26,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
         public DateTime AccountCreateDate { get; set; }
         public bool IsActive { get; set; }
 
-        public List<Document>? Document { get; set; }
-        public List<Address>? Address { get; set; }
-        public List<Membership>? Membership { get; set; }
+        public List<DocumentDTO>? Document { get; set; }
+        public List<AddressDTO>? Address { get; set; }
+        public List<MembershipDTO>? Membership { get; set; }
 
 
         public IFormFile? ImageFile { get; set; }

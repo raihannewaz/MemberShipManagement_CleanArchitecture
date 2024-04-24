@@ -2,7 +2,7 @@
 using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
 
-using Microsoft.AspNetCore.Http;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,6 +17,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 {
     public class Member
     {
+  
+
         public int MemberId { get; private set; }
 
         private string FirstName { get;  set; }
@@ -99,19 +101,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
             ProfileImageUrl = url;
         }
 
-        public void UpdateImage(Member member)
+        public string GetProfileImageUrl()
         {
-            if (member != null)
-            {
-                if (!string.IsNullOrEmpty(member.ProfileImageUrl))
-                {
-                    string existingPhotoPath =  member.ProfileImageUrl;
-                    if (File.Exists(existingPhotoPath))
-                    {
-                        File.Delete(existingPhotoPath);
-                    }
-                }
-            }
+            return ProfileImageUrl;
         }
+        
     }
 }

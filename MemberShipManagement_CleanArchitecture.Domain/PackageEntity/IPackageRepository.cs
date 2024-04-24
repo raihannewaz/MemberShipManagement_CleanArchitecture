@@ -9,11 +9,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
 {
     public interface IPackageRepository
     {
-        Task<Package> CreateAsync(Package p);
+        Task CreateAsync(Package p);
         Task UpdateAsync(Package package);
         Task DeleteAsync(Package package);
         Task<Package> GetById(int a);
-        Task<IEnumerable<Package>> GetAllAsync(string a);
+
         Task SaveChangeAsync();
     }
 }

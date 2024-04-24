@@ -15,49 +15,47 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         public int MembershipId { get; private set; }
 
         public int MemberId { get; private set; }
-        //[JsonIgnore]
-
-        public Member? Member { get;  set; }
+       
+        private Member? Member { get;  set; }
 
         public int PackageId { get; private set; }
 
-        //[JsonIgnore]
-        public Package? Package { get;  set; }
+        public Package Package { get; private set; }
 
-        public DateTime? StartDate { get; private set; }
-        public DateTime? EndDate { get; private set; }
+        private DateTime StartDate { get;  set; }
+        public DateTime EndDate { get;  private set; }
 
-        public int Quantity { get; private set; }
+        private int Quantity { get;  set; }
 
-        public int TotalInstallment { get; private set; }
+        private int TotalInstallment { get;  set; }
 
-        public decimal InstallmentAmount { get; private set; }
+        private decimal InstallmentAmount { get;  set; }
 
-        public List<Payment> Payment { get;  set; }
+        private List<Payment> Payment { get;  set; }
 
 
 
         private Membership() { }
 
-        private Membership(int memberid, int packid, int quanity)
+
+        private Membership(int memberid, int packid, int quanity, int duration, int installment, decimal amount)
         {
             MemberId = memberid;
             PackageId = packid;
             Quantity = quanity;
-        }
-
-        public static Membership CreateMembership(int memberid, int packid, int quanity)
-        {
-            return new Membership(memberid, packid, quanity);
-        }
-
-        public void AutoSetFileds(DateTime start, DateTime end, int installment, decimal amount)
-        {
-            StartDate = start;
-            EndDate = end;
             TotalInstallment = installment;
             InstallmentAmount = amount;
+            StartDate = DateTime.Now;
+            EndDate = DateTime.Now.AddDays(Convert.ToDouble(duration));
         }
+
+
+        public static Membership CreateMembership(int memberid, int packid, int quanity, int duration, int installment, decimal amount)
+        {
+            return new Membership(memberid, packid, quanity, duration, installment, amount);
+        }
+
+
 
         public void UpdateMembership(int memberid, int packid, int quanity)
         {
@@ -81,11 +79,45 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         }
 
 
-        public void DueDateCalculate(DateTime end)
+
+
+        public decimal GetInstallmentAmmount()
         {
-            EndDate = end;
+            return InstallmentAmount;
         }
 
+        public int GetTotalInstallment()
+        {
+            return TotalInstallment;
+        }
+
+
+
+        public decimal CalculateDueAmount()
+        {
+           
+            decimal dueAmount = 0;
+
+            if (Package.GetPackageType() == "Daily" || Package.GetPackageType() == "Monthly")
+            {
+                dueAmount = InstallmentAmount * 0.05m;
+            }
+
+            return dueAmount;
+        }
+
+        public void ExtendMemberPackageEndDate()
+        {
+            var package = Package;
+            if (package.PackageType == "Daily")
+            {
+                EndDate.AddDays(1);
+            }
+            else if (package.PackageType == "Monthly")
+            {
+                EndDate.AddMonths(1);
+            }
+        }
     }
 
 

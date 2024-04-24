@@ -5,6 +5,7 @@ using MemberShipManagement_CleanArchitecture.Application.Members.Command.DeleteC
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll;
+using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetById;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +40,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
-            var data = await _sender.Send(new MemberQueries() { MemberId = id });
+            var data = await _sender.Send(new GetMemberByIdCommand() { MemberId = id });
             if (data == null)
             {
                 return NotFound();

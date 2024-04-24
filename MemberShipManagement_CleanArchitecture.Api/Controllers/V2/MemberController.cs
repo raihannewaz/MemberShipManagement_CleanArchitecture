@@ -1,6 +1,7 @@
 ﻿using Asp.Versioning;
 using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query;
+using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetById;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V2
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
-            var data = await _sender.Send(new MemberQueries() { MemberId = id });
+            var data = await _sender.Send(new GetMemberByIdCommand() { MemberId = id });
             if (data == null)
             {
                 return NotFound();

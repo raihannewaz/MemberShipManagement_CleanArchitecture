@@ -34,6 +34,19 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
             return imgUrl;
         }
 
+        public void UpdateFile(string url)
+        {
+
+            if (!string.IsNullOrEmpty(url))
+            {
+                string existingPhotoPath = _webHostEnvironment.WebRootPath + "\\" + url;
+                if (File.Exists(existingPhotoPath))
+                {
+                    File.Delete(existingPhotoPath);
+                }
+
+            }
+        }
 
     }
 }

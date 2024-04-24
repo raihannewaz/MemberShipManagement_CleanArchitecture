@@ -10,6 +10,8 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity
     {
         Task HandleDuePayments();
 
-        Task<IEnumerable<DuePayment>> GetDuesById(string a);
+        Task<DuePayment> GetById(int a);
+
+        Task DeleteAsync(DuePayment duePayment);
     }
 }

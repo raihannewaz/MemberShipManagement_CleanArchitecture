@@ -29,14 +29,9 @@
     <Folder Include="DuePayments\Command\UpdateCommand\" />
     <Folder Include="DuePayments\Query\GetAll\" />
     <Folder Include="DuePayments\Query\GetById\" />
-    <Folder Include="Memberships\Query\GetAll\" />
     <Folder Include="Memberships\Query\GetById\" />
-    <Folder Include="Members\Query\GetById\" />
-    <Folder Include="Packages\Query\GetAll\" />
-    <Folder Include="Packages\Query\GetById\" />
     <Folder Include="Payments\Command\DeleteCommand\" />
     <Folder Include="Payments\Command\UpdateCommand\" />
-    <Folder Include="Payments\Query\GetAll\" />
     <Folder Include="Payments\Query\GetById\" />
   </ItemGroup>
 

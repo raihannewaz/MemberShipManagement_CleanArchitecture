@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Penalty\**" />
+    <EmbeddedResource Remove="Penalty\**" />
+    <None Remove="Penalty\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.3">
       <PrivateAssets>all</PrivateAssets>
@@ -21,10 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MemberShipManagement_CleanArchitecture.Application\MemberShipManagement_CleanArchitecture.Application.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Penalty\" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Payments.Command.CreateCommand
 {
-    public class CreatePaymentCommand : IRequest<Payment>
+    public class CreatePaymentCommand : IRequest<int>
     {
 
         public int MembershipId { get; set; }

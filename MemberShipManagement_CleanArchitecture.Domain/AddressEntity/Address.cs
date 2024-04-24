@@ -10,7 +10,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
     public class Address
     {
         public int AddressId { get; private set; }
-        public string AddressType { get;  set; }
+        public string AddressType { get; private set; }
         private string HouseNo { get;  set; }
         private string City { get;  set; }
         private string Region { get;  set; }
@@ -18,7 +18,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
         private string PostalCode { get;  set; }
         private string Country { get;  set; }
 
-        public int MemberId { get;  set; }
+        public int MemberId { get; private set; }
         private Member? Member { get; set; }
 
 
@@ -44,12 +44,9 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
             return new Address(addressType, houseNo, city, region, postOffice, postalCode, country, memberId);
         }
 
-        public void UpdateAddress(string addressType, string houseNo, string city, string region, string postOffice, string postalCode, string country)
+        public void UpdateAddress(string houseNo, string city, string region, string postOffice, string postalCode, string country)
         {
-            if (addressType != null)
-            {
-                AddressType = addressType;
-            }
+            
             if (houseNo != null)
             {
                 HouseNo = houseNo;
@@ -76,6 +73,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AddressEntity
             }
         }
 
+        public string GetAddressType()
+        {
+            return AddressType;
+        }
 
 
         public enum EAddressType

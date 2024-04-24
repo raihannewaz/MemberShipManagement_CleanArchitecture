@@ -29,10 +29,10 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Upd
                 throw new ArgumentException($"Member with ID {request.MemberId} not found.");
             }
             member.UpdateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB, request.IsActive);
-            member.UpdateImage(member);
 
             if (request.ImageFile != null)
             {
+                _fileService.UpdateFile(member.GetProfileImageUrl());
                 var url = await _fileService.UploadFile(request.ImageFile);
                 member.PhotoUrl(url);
             }

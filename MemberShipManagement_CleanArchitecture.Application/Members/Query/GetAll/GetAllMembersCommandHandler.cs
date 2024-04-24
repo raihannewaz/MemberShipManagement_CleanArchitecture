@@ -28,11 +28,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAl
             {
                 string query = "SELECT* From Members";
 
-                var result = await conn.QueryMultipleAsync(query);
+                var result = await conn.QueryAsync<MemberDTO>(query);
 
-                var members = await result.ReadAsync<MemberDTO>();
-
-                return members.ToList();
+                return result.ToList();
             }
         }
     }

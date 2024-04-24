@@ -1,10 +1,5 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using MediatR;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.UpdateCommand
 {

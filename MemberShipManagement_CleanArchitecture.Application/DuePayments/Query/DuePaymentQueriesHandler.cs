@@ -19,19 +19,19 @@ namespace MemberShipManagement_CleanArchitecture.Application.DuePayments.Query
 
         public async Task<IEnumerable<DuePayment>> Handle(DuePaymentQueries request, CancellationToken cancellationToken)
         {
-            switch (request.Query)
-            {
-                case "getMemberDues":
-                    var data = request.getMemberDues(request.MembershipId);
-                    var member = await _duePaymentRepository.GetDuesById(data);
+            //switch (request.Query)
+            //{
+            //    case "getMemberDues":
+            //        var data = request.getMemberDues(request.MembershipId);
+            //        //var member = await _duePaymentRepository.GetDuesById(data);
 
 
 
-                    return member;
+            //        //return member;
 
-                default:
+            //    default:
                     throw new ArgumentException("Invalid query.");
-            }
+            //}
         }
     }
 }

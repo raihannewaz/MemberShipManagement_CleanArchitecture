@@ -12,15 +12,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
     {
         public int PaymentId { get; private set; }
 
-        public int MembershipId { get;  set; }
+        public int MembershipId { get; private set; }
         [JsonIgnore]
         private Membership? Membership { get;  set; }
 
-        public DateTime PaymentDate { get;  set; }
+        public DateTime PaymentDate { get; private set; }
 
-        public int AdvanceInstallMent {  get;  set; }
+        private int AdvanceInstallMent {  get;  set; }
 
-        public decimal PaidAmmount {  get;  set; } 
+        private decimal PaidAmmount {  get;  set; } 
 
 
         private Payment() { }
@@ -30,6 +30,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
             MembershipId = membershipId;
             PaidAmmount = paidAmmount;
             AdvanceInstallMent = adv;
+            PaymentDate = DateTime.Now;
         }
 
         public static Payment CreatePayment(int membershipId,int adv, decimal paidAmmount)
@@ -37,10 +38,24 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
             return new Payment(membershipId, adv, paidAmmount);
         }
 
-        public void AutoSetPaymentDate(DateTime date)
+
+
+        public int InstallmentMinus(decimal amount,int advInstallment, int totalInstallment, decimal installmentAmount)
         {
-            PaymentDate = date;
+            int installmentMinus = 0;
+
+            if (amount == installmentAmount)
+            {
+                installmentMinus = totalInstallment - 1;
+            }
+
+            else if (advInstallment >= 2)
+            {
+                installmentMinus = (totalInstallment - 1) - advInstallment;
+            }
+            return installmentMinus;
         }
+
 
     }
 }

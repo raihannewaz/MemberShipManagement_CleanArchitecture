@@ -14,10 +14,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         Task CreateAsync(Member member);
         Task UpdateAsync(Member member);
         Task DeleteAsync(Member member);
-        //Task<IReadOnlyList<MemberDTO>> GetByIdSql(string a);
         Task<Member> GetById(int a);
-
-        //Task<IReadOnlyList<MemberDTO>> GetAllAsync(string a);
         Task SaveChangeAsync();
     }
 }

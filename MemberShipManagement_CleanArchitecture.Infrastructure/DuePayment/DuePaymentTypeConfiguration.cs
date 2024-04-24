@@ -12,7 +12,18 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment
     {
         public void Configure(EntityTypeBuilder<Domain.DuePaymentEntity.DuePayment> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("DuePayments");
+
+            builder.HasKey(m => m.DuePaymentId);
+            builder.Property(m => m.DuePaymentId).UseIdentityColumn();
+
+            builder.Property<decimal>("Amount").IsRequired();
+            builder.Property<DateTime>("DueDate").IsRequired();
+
+
+            builder.HasOne("Membership").WithMany("DuePayemnt").HasForeignKey("MembershipId");
+
+
         }
     }
 }

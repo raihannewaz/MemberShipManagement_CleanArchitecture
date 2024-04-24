@@ -13,40 +13,27 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
     public class Document
     {
         public int DocumentId { get; private set; }
-        public string? DocumentType { get;  set; }
-        private string? DocumentUrl { get;  set; }
+        private string DocumentType { get;  set; }
+        private string DocumentUrl { get;  set; }
 
         public int MemberId { get; private set; }
         private Member? Member { get; set; }
-
-        [NotMapped]
-        [JsonIgnore]
-        private IFormFile? FileType { get; set; }
 
 
         private Document() { }
 
 
-        private Document(string type, IFormFile file, int memberId)
+        private Document(string type, int memberId)
         {
             DocumentType = type;
-            FileType = file;
             MemberId = memberId;
         }
 
-        public static Document CreateDoc(string type, IFormFile f, int memberId)
+        public static Document CreateDoc(string type, int memberId)
         {
-            return new Document(type, f, memberId);
+            return new Document(type, memberId);
         }
 
-
-        public void UpdateDoc(IFormFile file)
-        {
-            if (file != null)
-            {
-                FileType = file;
-            }
-        }
 
 
         public void FileUrl(string a)
@@ -54,6 +41,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
             DocumentUrl = a;
         }
 
+        public string GetDocumentUrl()
+        {
+            return DocumentUrl;
+        }
+
+        public string GetDocumentType()
+        {
+            return DocumentType;
+        }
 
         public enum EDocumentType
         {

@@ -14,9 +14,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 
         public int MembershipId { get; set; }
 
-        [JsonIgnore]
-        public Membership? Membership { get; set; }
-
         public DateTime PaymentDate { get; set; }
 
         public int AdvanceInstallMent { get; set; }

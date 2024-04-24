@@ -10,12 +10,13 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
     public class Package
     {
         public int PackageId { get; private set; }
-        public string? PackageName { get;  set; }
-        public string? PackageType { get;  set; }
-        public int Duration { get;  set; }
-        public decimal PackagePrice { get;  set; }
-        public bool IsActive { get;  set; }
-        public List<Membership>? Membership { get;  set; }
+        private string PackageName { get; set; }
+        public string PackageType { get; private set; }
+        private int Duration { get; set; }
+        private decimal PackagePrice { get; set; }
+        private bool IsActive { get; set; }
+
+        private List<Membership>? Membership { get; set; }
 
         private Package() { }
 
@@ -60,12 +61,56 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
 
 
 
+        public decimal PackageAmountToAssign(int qunaity)
+        {
+            decimal payAmount = 0;
+
+            if (PackageType == EPackageType.Daily.ToString())
+            {
+                payAmount = Convert.ToDecimal(PackagePrice * qunaity);
+            }
+            if (PackageType == EPackageType.Monthly.ToString())
+            {
+                payAmount = Convert.ToDecimal(PackagePrice * qunaity);
+            }
+
+            return payAmount;
+        }
+
+        public int PackageInstallmentToAssign(int qunaity)
+        {
+           
+            int installment = 0;
+
+            if (PackageType == EPackageType.Daily.ToString())
+            {
+                installment = Duration * 1;
+            }
+            if (PackageType == EPackageType.Monthly.ToString())
+            {
+                installment = Duration / 30;
+            }
+
+            return installment;
+        }
+
+
+        public int GetDuration()
+        {
+            return Duration;
+        }
+
+
+        public string GetPackageType()
+        {
+            return PackageType;
+        }
+
 
         public enum EPackageType
         {
             Daily,
             Monthly
-
         }
 
     }

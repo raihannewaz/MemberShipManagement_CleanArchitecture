@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Memberships.Command.CreateCommand
 {
-    public class CreateMembershipCommand : IRequest<Membership>
+    public class CreateMembershipCommand : IRequest<int>
     {
         public int MemberId { get; set; }
 

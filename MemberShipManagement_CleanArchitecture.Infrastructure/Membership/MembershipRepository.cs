@@ -11,52 +11,24 @@ using Microsoft.EntityFrameworkCore;
 using MemberShipManagement_CleanArchitecture.Domain.PaymentEntity;
 using static System.Net.Mime.MediaTypeNames;
 using Dapper;
+using MemberShipManagement_CleanArchitecture.Application.Services;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
 {
     internal class MembershipRepository : IMembershipRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly DapperDbContext _dapperDbContext;
+        private readonly IDapperDbContext _dapperDbContext;
 
-        public MembershipRepository(ApplicationDbContext dbContext, DapperDbContext dapperDb)
+        public MembershipRepository(ApplicationDbContext dbContext, IDapperDbContext dapperDb)
         {
             _context = dbContext;
             _dapperDbContext = dapperDb;
         }
 
-        public async Task<Domain.MembershipEntity.Membership> CreateAsync(Domain.MembershipEntity.Membership p)
+        public async Task CreateAsync(Domain.MembershipEntity.Membership p)
         {
-
-            var package = await _context.Packages.FindAsync(p.PackageId);
-
-            if (package == null)
-            {
-                throw new ArgumentNullException("Package cannot be null.");
-            }
-
-            decimal payAmount = 0;
-            int installment = 0;
-
-            if (package.PackageType == "Daily")
-            {
-                payAmount = Convert.ToDecimal(package.PackagePrice * p.Quantity);
-
-                installment = package.Duration * 1;
-            }
-            if (package.PackageType == "Monthly")
-            {
-                payAmount = Convert.ToDecimal(package.PackagePrice * p.Quantity);
-
-                installment = package.Duration / 30;
-            }
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddDays(Convert.ToDouble(package.Duration));
-
-            p.AutoSetFileds(start, end, installment, payAmount);
-
             await _context.Memberships.AddAsync(p);
-            return p;
         }
 
         public Task DeleteAsync(Domain.MembershipEntity.Membership membership)
@@ -91,17 +63,5 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
             return dueMemberPackages;
         }
 
-
-
-        public async Task<IEnumerable<Domain.MembershipEntity.Membership>> GetAllAsync(string a)
-        {
-            using (var conn = _dapperDbContext.CreateConnection())
-            {
-                var request = await conn.QueryMultipleAsync(a);
-
-                var memberships = await request.ReadAsync<Domain.MembershipEntity.Membership>();
-                return memberships;
-            }
-        }
     }
 }

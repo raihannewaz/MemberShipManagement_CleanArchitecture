@@ -10,6 +10,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Services
     public interface IFileService
     {
         Task<string> UploadFile(IFormFile file);
+        void UpdateFile(string url);
 
         //Task Delete (int id);
     }

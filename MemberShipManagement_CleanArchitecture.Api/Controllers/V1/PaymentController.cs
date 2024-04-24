@@ -2,6 +2,7 @@
 using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Payments.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Payments.Query;
+using MemberShipManagement_CleanArchitecture.Application.Payments.Query.GetAll;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,11 +23,9 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new PaymentQueries()
-            {
-                Query = "AllPayments"
-            };
-            var data = await _sender.Send(query);
+            var query = new GetAllPaymentsCommand();
+
+             var data = await _sender.Send(query);
 
             return Ok(data);
         }
