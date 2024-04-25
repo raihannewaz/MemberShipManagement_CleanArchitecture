@@ -20,7 +20,14 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Del
         public async Task<int> Handle(DeleteMemberCommand request, CancellationToken cancellationToken)
         {
             var a = await _memberRepository.GetById(request.MemberId);
+            
+            if (a == null)
+            {
+                throw new ArgumentNullException($"Member with Id: {request.MemberId} Not Found");
+            }
+
             await _memberRepository.DeleteAsync(a);
+            await _memberRepository.SaveChangeAsync();
             return a.MemberId;
         }
     }

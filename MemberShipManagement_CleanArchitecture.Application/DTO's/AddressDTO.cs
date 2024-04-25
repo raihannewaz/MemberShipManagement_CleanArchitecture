@@ -15,6 +15,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
         public string Country { get; set; }
 
         public int MemberId { get; set; }
-        public Member? Member { get; set; }
+        public MemberDTO? Member { get; set; }
     }
 }

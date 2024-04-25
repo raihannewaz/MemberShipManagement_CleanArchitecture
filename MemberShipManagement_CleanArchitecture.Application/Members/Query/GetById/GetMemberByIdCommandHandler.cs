@@ -24,12 +24,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetBy
         {
             using (var conn = _dbContext.CreateConnection())
             {
-                string query = @$"SELECT * FROM Members where MemberId = {request.MemberId}
-                      SELECT DocumentType, DocumentUrl From Documents where MemberId = {request.MemberId}
-                      SELECT AddressType ,HouseNo ,City,Region,PostOffice,PostalCode,Country From Addresses where MemberId = {request.MemberId};
-                      SELECT PackageId,StartDate,EndDate,Quantity ,TotalInstallment,InstallmentAmount From Memberships where MemberId = {request.MemberId}";
+                string query = @$"SELECT * FROM Members where MemberId = @MemberId
+                      SELECT DocumentType, DocumentUrl From Documents where MemberId = @MemberId
+                      SELECT AddressType ,HouseNo ,City,Region,PostOffice,PostalCode,Country From Addresses where MemberId = @MemberId;
+                      SELECT PackageId,StartDate,EndDate,Quantity ,TotalInstallment,InstallmentAmount From Memberships where MemberId = @MemberId";
 
-                var result = await conn.QueryMultipleAsync(query);
+                var result = await conn.QueryMultipleAsync(query, new { MemberId = request.MemberId});
 
                 var member = await result.ReadSingleAsync<MemberDTO>();
                 var doc = await result.ReadAsync<DocumentDTO>();

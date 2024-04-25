@@ -37,7 +37,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/documents/addresses/memberships")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             var data = await _sender.Send(new GetMemberByIdCommand() { MemberId = id });

@@ -1,6 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
-using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;

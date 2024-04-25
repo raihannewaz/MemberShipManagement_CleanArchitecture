@@ -14,14 +14,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
         public int MembershipId { get;  set; }
 
         public int MemberId { get;  set; }
-        //[JsonIgnore]
 
-        public Member? Member { get; set; }
+        public MemberDTO? Member { get; set; }
 
         public int PackageId { get;  set; }
 
-        //[JsonIgnore]
-        public Package? Package { get; set; }
+        public PackageDTO? Package { get; set; }
 
         public DateTime? StartDate { get;  set; }
         public DateTime? EndDate { get;  set; }
@@ -32,6 +30,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 
         public decimal InstallmentAmount { get;  set; }
 
-        public List<Payment> Payment { get; set; }
+        public List<PaymentDTO>? Payment { get; set; }
     }
 }

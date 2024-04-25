@@ -28,7 +28,6 @@
     <Folder Include="DuePayments\Command\DeleteCommand\" />
     <Folder Include="DuePayments\Command\UpdateCommand\" />
     <Folder Include="DuePayments\Query\GetAll\" />
-    <Folder Include="DuePayments\Query\GetById\" />
     <Folder Include="Memberships\Query\GetById\" />
     <Folder Include="Payments\Command\DeleteCommand\" />
     <Folder Include="Payments\Command\UpdateCommand\" />

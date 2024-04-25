@@ -1,6 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
-using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
 using MemberShipManagement_CleanArchitecture.Infrastructure.Member;
 using Microsoft.EntityFrameworkCore;

@@ -25,7 +25,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
         {
             try
             {
-
                 var member = Member.CreateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB);
                 if (request.ImageFile != null)
                 {

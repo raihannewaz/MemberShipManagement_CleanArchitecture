@@ -24,10 +24,8 @@ namespace MemberShipManagement_CleanArchitecture.Application.Memberships.Command
         {
             
             var pack = await _packageRepository.GetById(request.PackageId);
-            var amount = pack.PackageAmountToAssign(request.Quantity);
-            var installment = pack.PackageInstallmentToAssign(request.Quantity);
-            var duration = pack.GetDuration();
-            var data = Membership.CreateMembership(request.MemberId, request.PackageId, request.Quantity, duration, installment, amount);
+            var data = Membership.CreateMembership(request.MemberId, request.PackageId, request.Quantity);
+            data.AssignPackage(pack);
             await _membershipRepository.CreateAsync(data);
             await _membershipRepository.SaveChangeAsync();
 

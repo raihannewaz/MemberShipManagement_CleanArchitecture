@@ -10,6 +10,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -17,17 +18,17 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 {
     public class Member
     {
-  
+
 
         public int MemberId { get; private set; }
 
-        private string FirstName { get;  set; }
-        private string LastName { get;  set; }
-        private string Email { get;  set; }
-        private string PhoneNo { get;  set; }
-        private DateTime DOB { get;  set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        private string Email { get; set; }
+        private string PhoneNo { get; set; }
+        private DateTime DOB { get; set; }
 
-        private string ProfileImageUrl { get;  set; }
+        private string ProfileImageUrl { get; set; }
         private DateTime AccountCreateDate { get; set; }
         private bool IsActive { get; set; }
 
@@ -42,7 +43,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
         }
 
-      
+
 
         private Member(string fName, string lName, string email, string phone, DateTime dob)
         {
@@ -60,9 +61,35 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
         public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob)
         {
+            if (string.IsNullOrEmpty(fName))
+            {
+                throw new ArgumentException($"Incorrect First Name: {fName}");
+            }
+
+            if (string.IsNullOrEmpty(lName))
+            {
+                throw new ArgumentException($"Incorrect Last Name: {lName}");
+            }
+
+            if (string.IsNullOrEmpty(email))
+            {
+                throw new ArgumentException($"Incorrect Email: {email}");
+            }
+
+            if (string.IsNullOrEmpty(phone))
+            {
+                throw new ArgumentException($"Incorrect Phone: {phone}");
+            }
+
+
             return new Member(fName, lName, email, phone, dob);
         }
 
+        public bool BeAValidPhoneNumber(string phoneNo)
+        {
+            string pattern = @"^(018|017|016|019|013|014|015)\d{8}$";
+            return Regex.IsMatch(phoneNo, pattern);
+        }
 
 
         public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, bool isactive)

@@ -40,6 +40,9 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
 
 
 
+
+
+
         public int InstallmentMinus(decimal amount,int advInstallment, int totalInstallment, decimal installmentAmount)
         {
             int installmentMinus = 0;

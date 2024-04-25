@@ -15,6 +15,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
         public int Duration { get;  set; }
         public decimal PackagePrice { get;  set; }
         public bool IsActive { get;  set; }
-        public List<Membership>? Membership { get; set; }
+        public List<MembershipDTO>? Membership { get; set; }
     }
 }

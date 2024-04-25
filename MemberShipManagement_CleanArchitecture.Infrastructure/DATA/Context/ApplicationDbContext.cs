@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemberShipManagement_CleanArchitecture.Infrastructure.DATA
+namespace MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context
 {
     public class ApplicationDbContext : DbContext
     {
@@ -37,7 +37,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.DATA
         public DbSet<Domain.MembershipEntity.Membership> Memberships { get; set; }
         public DbSet<Domain.PaymentEntity.Payment> Payments { get; set; }
         public DbSet<Domain.DuePaymentEntity.DuePayment> DuePayments { get; set; }
-        
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -31,6 +31,16 @@ namespace MemberShipManagement_CleanArchitecture.Domain.DocumentEntity
 
         public static Document CreateDoc(string type, int memberId)
         {
+            if (string.IsNullOrEmpty(type))
+            {
+                throw new ArgumentException("Incorrect type");
+            }
+
+            if (memberId <=0)
+            {
+                throw new ArgumentException("Incorrect MemberId");
+            }
+
             return new Document(type, memberId);
         }
 

@@ -31,18 +31,18 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V2
                 return NotFound();
             }
 
-            //var result = data.Select(dto => new
-            //{
-            //    dto.FirstName,
-            //    dto.LastName,
-            //    dto.PhoneNo,
-            //    dto.Email,
-            //    dto.AccountCreateDate,
-            //    dto.DOB,
-            //    dto.ProfileImageUrl
-            //}
-            //).ToList();
-            return Ok(data);
+            var result = data.Select(dto => new
+            {
+                dto.FirstName,
+                dto.LastName,
+                dto.PhoneNo,
+                dto.Email,
+                dto.AccountCreateDate,
+                dto.DOB,
+                dto.ProfileImageUrl
+            }
+            ).ToList();
+            return Ok(result);
         }
 
         //[HttpPost]

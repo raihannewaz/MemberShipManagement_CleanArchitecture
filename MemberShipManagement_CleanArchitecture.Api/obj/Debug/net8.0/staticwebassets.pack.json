@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\MemberFiles\\638494847517720684_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
     },
     {
-      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\638494867347810745_a8bd1f9386.jpg",
-      "PackagePath": "staticwebassets\\MemberFiles\\638494867347810745_a8bd1f9386.jpg"
-    },
-    {
       "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\638495685340279241_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
       "PackagePath": "staticwebassets\\MemberFiles\\638495685340279241_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
     },
@@ -39,6 +35,10 @@
     {
       "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\638495717392343459_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
       "PackagePath": "staticwebassets\\MemberFiles\\638495717392343459_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
+    },
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\638496613988970649_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "PackagePath": "staticwebassets\\MemberFiles\\638496613988970649_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MemberShipManagement_CleanArchitecture.Api.Microsoft.AspNetCore.StaticWebAssets.props",

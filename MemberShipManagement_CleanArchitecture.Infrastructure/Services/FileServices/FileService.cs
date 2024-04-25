@@ -20,7 +20,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
 
         public async Task<string> UploadFile(IFormFile file)
         {
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "MemberFiles\\");
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "MemberFiles/");
+
             string uniqueFileName = DateTime.Now.Ticks.ToString() + "_" + file.FileName;
             string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
@@ -29,7 +30,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
                 await file.CopyToAsync(fileStream);
             }
 
-            var imgUrl = "MemberFiles\\" + uniqueFileName;
+            var imgUrl = "MemberFiles/" + uniqueFileName;
 
             return imgUrl;
         }
@@ -39,7 +40,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
 
             if (!string.IsNullOrEmpty(url))
             {
-                string existingPhotoPath = _webHostEnvironment.WebRootPath + "\\" + url;
+                string existingPhotoPath = _webHostEnvironment.WebRootPath + "/" + url;
                 if (File.Exists(existingPhotoPath))
                 {
                     File.Delete(existingPhotoPath);

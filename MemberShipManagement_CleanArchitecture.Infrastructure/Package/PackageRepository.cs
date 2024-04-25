@@ -1,6 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
-using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using System;
 using System.Collections.Generic;
 using System.Linq;

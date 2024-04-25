@@ -31,6 +31,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
         public List<MembershipDTO>? Membership { get; set; }
 
 
-        public IFormFile? ImageFile { get; set; }
+        public IFormFile ImageFile { get; set; }
     }
 }

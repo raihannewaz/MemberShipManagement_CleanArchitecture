@@ -1,6 +1,5 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity;
 using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
-using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,48 +36,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.DuePayment
         }
 
        
-
-
-
-        //public async Task<IEnumerable<Domain.DuePaymentEntity.DuePayment>> GetDuesById(string a)
-        //{
-        //    using (var conn = _dapperDbContext.CreateConnection())
-        //    {
-        //        var result = await conn.QueryMultipleAsync(a);
-
-        //        var dues = await result.ReadAsync<Domain.DuePaymentEntity.DuePayment>();
-        //        var memberships = await result.ReadAsync<Domain.MembershipEntity.Membership>();
-        //        var members = await result.ReadAsync<Domain.MemberEntity.Member>();
-        //        var packs = await result.ReadAsync<Domain.PackageEntity.Package>();
-
-        //        foreach (var due in dues)
-        //        {
-        //            var membership = memberships.FirstOrDefault(m => m.MembershipId == due.MembershipId);
-        //            if (membership != null)
-        //            {
-        //                var member = members.FirstOrDefault(m => m.MemberId == membership.MemberId);
-        //                var package = packs.FirstOrDefault(p => p.PackageId == membership.PackageId);
-
-        //                if (member != null)
-        //                {
-        //                    if (member.Membership == null)
-        //                    {
-        //                        member.Membership = new List<Domain.MembershipEntity.Membership>();
-        //                    }
-        //                    membership.Member = member;
-        //                    membership.Package = package;
-        //                    member.Membership.Add(membership);
-
-        //                }
-        //            }
-        //        }
-
-        //        return dues;
-        //    }
-        //}
-
-
-
 
 
         public async Task HandleDuePayments()

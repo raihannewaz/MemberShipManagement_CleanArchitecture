@@ -38,21 +38,42 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         private Membership() { }
 
 
-        private Membership(int memberid, int packid, int quanity, int duration, int installment, decimal amount)
+        private Membership(int memberid, int packid, int quanity)
         {
             MemberId = memberid;
             PackageId = packid;
             Quantity = quanity;
-            TotalInstallment = installment;
-            InstallmentAmount = amount;
-            StartDate = DateTime.Now;
-            EndDate = DateTime.Now.AddDays(Convert.ToDouble(duration));
+          
         }
 
 
-        public static Membership CreateMembership(int memberid, int packid, int quanity, int duration, int installment, decimal amount)
+        public void AssignPackage(Package package)
         {
-            return new Membership(memberid, packid, quanity, duration, installment, amount);
+            InstallmentAmount = package.PackageAmountToAssign(Quantity);
+            TotalInstallment = package.PackageInstallmentToAssign(Quantity);
+            StartDate = DateTime.Now;
+            EndDate = DateTime.Now.AddDays(Convert.ToDouble(Quantity));
+        }
+
+        public static Membership CreateMembership(int memberid, int packid, int quanity)
+        {
+
+            if (memberid <=0)
+            {
+                throw new Exception(" InCorrect MemberId");
+            }
+
+            if (packid <=0)
+            {
+                throw new Exception("InCorrect PckageId");
+            }
+
+            if (quanity <=0)
+            {
+                throw new Exception("InCorrect Quantity");
+            }
+
+            return new Membership(memberid, packid, quanity);
         }
 
 

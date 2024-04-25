@@ -22,7 +22,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpGet]
+        [HttpGet("Packages")]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllPackagesCommand();
