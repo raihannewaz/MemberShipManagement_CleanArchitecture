@@ -35,6 +35,20 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PaymentEntity
 
         public static Payment CreatePayment(int membershipId,int adv, decimal paidAmmount)
         {
+            if (membershipId <=0)
+            {
+                throw new Exception($"Incorrect Membership Id: {membershipId}");
+            }
+            if (adv < 0)
+            {
+                throw new Exception($"Incorrect Advance Payment: {adv}");
+            }
+
+            if (paidAmmount <0)
+            {
+                throw new Exception($"Incorrect Paid Ammount: {paidAmmount}");
+            }
+
             return new Payment(membershipId, adv, paidAmmount);
         }
 

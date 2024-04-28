@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1l/uyXC+1T1CV5z7eR+fE5rUruY+yglkhoO921+9GFI=",
+  "Hash": "2Wa2Ne60K0AmxuFibi6ly8yJ/a/wWpIVSR8apMglw8U=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -53,6 +53,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MemberFiles\\r_01524512415\\638498972449704942_a8bd1f9386.jpg"
+    },
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "MemberFiles/Raihan_01829428422/638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
+    },
+    {
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg",
+      "SourceId": "MemberShipManagement_CleanArchitecture.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
+      "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
+      "RelativePath": "MemberFiles/Raihan_01829428422/638499251754520320_a8bd1f9386.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg"
     }
   ]
 }

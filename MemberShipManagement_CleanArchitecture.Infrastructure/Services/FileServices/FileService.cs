@@ -20,8 +20,8 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
 
         public async Task<string> UploadImage(IFormFile file, string memberName, string phone)
         {
-            string imagePath = "MemberFiles/" + memberName + "_" + phone + "/";
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, imagePath);
+            string imagePath = memberName + "_" + phone + "/";
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath,"MemberFiles" + imagePath);
 
             if (!Directory.Exists(uploadsFolder))
             {
@@ -45,7 +45,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
         {
             if (!string.IsNullOrEmpty(url))
             {
-                string existingPhotoPath = _webHostEnvironment.WebRootPath + "/" + url;
+                string existingPhotoPath = _webHostEnvironment.WebRootPath + url;
                 if (File.Exists(existingPhotoPath))
                 {
                     File.Delete(existingPhotoPath);

@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "PackagePath": "staticwebassets\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
+    },
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg",
+      "PackagePath": "staticwebassets\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg"
+    },
+    {
       "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\d_01532623254\\638498973760766561_a8bd1f9386.jpg",
       "PackagePath": "staticwebassets\\MemberFiles\\d_01532623254\\638498973760766561_a8bd1f9386.jpg"
     },
