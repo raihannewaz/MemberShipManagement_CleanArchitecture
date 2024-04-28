@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 using Microsoft.AspNetCore.Http;
+using MemberShipManagement_CleanArchitecture.Application.DTO_s;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand
 {
@@ -17,6 +18,11 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
         public string? PhoneNo { get; set; }
         public DateTime DOB { get; set; }
 
+        public int PackageId { get; set; }
+
+        public int Quantity { get; set; }
+        
+        
         public IFormFile? ImageFile { get; set; }
 
 

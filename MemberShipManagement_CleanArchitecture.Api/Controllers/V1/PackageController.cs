@@ -22,7 +22,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpGet("Packages")]
+        [HttpGet("allPackages")]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllPackagesCommand();
@@ -44,7 +44,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("create/")]
         public async Task<IActionResult> Create(CreatePackageCommand createPackage)
         {
             var data = await _sender.Send(createPackage);
@@ -52,7 +52,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, UpdatePackageCommand updatePackage)
         {
             if (id != updatePackage.PackageId)
@@ -64,7 +64,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _sender.Send(new DeletePackageCommand() { PackageId = id });

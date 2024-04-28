@@ -20,7 +20,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpGet]
+        [HttpGet("allPayments")]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllPaymentsCommand();
@@ -30,7 +30,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> Create(CreatePaymentCommand createPayment)
         {
             var data = await _sender.Send(createPayment);

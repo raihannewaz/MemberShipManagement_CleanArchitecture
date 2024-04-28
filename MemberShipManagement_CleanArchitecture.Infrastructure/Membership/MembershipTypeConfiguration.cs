@@ -18,9 +18,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Membership
             builder.HasKey(m=>m.MembershipId);
             builder.Property(m=>m.MembershipId).UseIdentityColumn();
 
-            builder.HasOne("Member")
-                .WithMany("Membership")
-                .HasForeignKey("MemberId");
+            //builder.HasOne("Member")
+            //    .WithMany()
+            //    .HasForeignKey("MemberId");
 
             builder.HasOne("Package")
                 .WithMany("Membership")

@@ -18,9 +18,15 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<string> UploadFile(IFormFile file)
+        public async Task<string> UploadImage(IFormFile file, string memberName, string phone)
         {
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "MemberFiles/");
+            string imagePath = "MemberFiles/" + memberName + "_" + phone + "/";
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, imagePath);
+
+            if (!Directory.Exists(uploadsFolder))
+            {
+                Directory.CreateDirectory(uploadsFolder);
+            }
 
             string uniqueFileName = DateTime.Now.Ticks.ToString() + "_" + file.FileName;
             string filePath = Path.Combine(uploadsFolder, uniqueFileName);
@@ -30,14 +36,13 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
                 await file.CopyToAsync(fileStream);
             }
 
-            var imgUrl = "MemberFiles/" + uniqueFileName;
+            var imgUrl = imagePath + uniqueFileName;
 
             return imgUrl;
         }
 
         public void UpdateFile(string url)
         {
-
             if (!string.IsNullOrEmpty(url))
             {
                 string existingPhotoPath = _webHostEnvironment.WebRootPath + "/" + url;
@@ -45,7 +50,6 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
                 {
                     File.Delete(existingPhotoPath);
                 }
-
             }
         }
 

@@ -33,7 +33,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Upd
             if (request.ImageFile != null)
             {
                 _fileService.UpdateFile(member.GetProfileImageUrl());
-                var url = await _fileService.UploadFile(request.ImageFile);
+                var url = await _fileService.UploadImage(request.ImageFile, request.LastName, request.PhoneNo);
                 member.PhotoUrl(url);
             }
 

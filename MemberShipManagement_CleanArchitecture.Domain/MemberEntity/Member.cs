@@ -34,7 +34,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
         private List<Document>? Document { get; set; }
         private List<Address>? Address { get; set; }
-        private List<Membership>? Membership { get; set; }
+        private List<Membership> Memberships { get;  set; }
 
 
 
@@ -42,8 +42,6 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         {
 
         }
-
-
 
         private Member(string fName, string lName, string email, string phone, DateTime dob)
         {
@@ -58,38 +56,33 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
 
 
 
-
         public static Member CreateMember(string fName, string lName, string email, string phone, DateTime dob)
         {
             if (string.IsNullOrEmpty(fName))
             {
-                throw new ArgumentException($"Incorrect First Name: {fName}");
+                throw new Exception($"Incorrect First Name: {fName}");
             }
 
             if (string.IsNullOrEmpty(lName))
             {
-                throw new ArgumentException($"Incorrect Last Name: {lName}");
+                throw new Exception($"Incorrect Last Name: {lName}");
             }
 
             if (string.IsNullOrEmpty(email))
             {
-                throw new ArgumentException($"Incorrect Email: {email}");
+                throw new Exception($"Incorrect Email: {email}");
             }
 
             if (string.IsNullOrEmpty(phone))
             {
-                throw new ArgumentException($"Incorrect Phone: {phone}");
+                throw new Exception($"Incorrect Phone: {phone}");
             }
 
 
             return new Member(fName, lName, email, phone, dob);
         }
 
-        public bool BeAValidPhoneNumber(string phoneNo)
-        {
-            string pattern = @"^(018|017|016|019|013|014|015)\d{8}$";
-            return Regex.IsMatch(phoneNo, pattern);
-        }
+
 
 
         public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, bool isactive)
@@ -132,6 +125,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
         {
             return ProfileImageUrl;
         }
-        
+
+        public string GetFirstName()
+        {
+            return FirstName;
+        }
+        public string GetPhone()
+        {
+            return PhoneNo;
+        }
+
     }
 }

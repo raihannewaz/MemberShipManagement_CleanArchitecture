@@ -16,7 +16,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
 
         public int MemberId { get; private set; }
        
-        private Member? Member { get;  set; }
+        private Member? Member { get;   set; }
 
         public int PackageId { get; private set; }
 
@@ -47,30 +47,34 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
         }
 
 
+
+
         public void AssignPackage(Package package)
         {
             InstallmentAmount = package.PackageAmountToAssign(Quantity);
             TotalInstallment = package.PackageInstallmentToAssign(Quantity);
             StartDate = DateTime.Now;
-            EndDate = DateTime.Now.AddDays(Convert.ToDouble(Quantity));
+            EndDate = DateTime.Now.AddDays(Convert.ToDouble(package.GetDuration()));
         }
+
+
 
         public static Membership CreateMembership(int memberid, int packid, int quanity)
         {
 
             if (memberid <=0)
             {
-                throw new Exception(" InCorrect MemberId");
+                throw new Exception($"InCorrect MemberId: {memberid}");
             }
 
             if (packid <=0)
             {
-                throw new Exception("InCorrect PckageId");
+                throw new Exception($"InCorrect PckageId: {packid}");
             }
 
             if (quanity <=0)
             {
-                throw new Exception("InCorrect Quantity");
+                throw new Exception($"InCorrect Quantity: {quanity}");
             }
 
             return new Membership(memberid, packid, quanity);
@@ -80,15 +84,15 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MembershipEntity
 
         public void UpdateMembership(int memberid, int packid, int quanity)
         {
-            if (memberid != 0)
+            if (memberid !<= 0)
             {
                 MemberId = memberid;
             }
-            if (packid != 0)
+            if (packid !<= 0)
             {
                 PackageId =packid;
             }
-            if (quanity != 0 || quanity !<0)
+            if (quanity !<= 0)
             {
                 Quantity = quanity;
             }

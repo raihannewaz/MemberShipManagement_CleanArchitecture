@@ -1,4 +1,7 @@
+
+use master
 create database MembershipManageDb
+GO
 
 use MembershipManageDb
 go
@@ -29,11 +32,10 @@ CREATE TABLE Addresses (
     MemberId int FOREIGN KEY REFERENCES Members(MemberId)
 );
 Go
-Insert into Addresses Values('rn','16, nn','ctg','ctg','ctg','1211','aa',1)
 
 
 
-CREATE TABLE Document (
+CREATE TABLE Documents (
     DocumentId INT PRIMARY KEY Identity(1,1),
     DocumentType NVARCHAR(15),
     DocumentUrl NVARCHAR(MAX),
@@ -52,19 +54,18 @@ IsActive bit
 )
 GO
 
+CREATE TABLE Memberships (
+    MembershipId INT PRIMARY KEY IDENTITY(1,1),
+    MemberId INT FOREIGN KEY REFERENCES Members(MemberId),
+    PackageId INT FOREIGN KEY REFERENCES Packages(PackageId),
+    StartDate DATE,
+    EndDate DATE,
+    Quantity INT,
+    TotalInstallment INT,
+    InstallmentAmount DECIMAL(18,2)
+);
 
 
-create table Memberships (
-MembershipId int primary key identity(1,1),
-MemberId int Foreign key references Members(MemberId),
-PackageId int foreign key references Packages(PackageId),
-StartDate date,
-EndDate date,
-Quantity int,
-TotalInstallment int,
-InstallmentAmount decimal(18,2)
-)
-GO
 
 create table Payments(
 PaymentId int primary key identity(1,1),
@@ -88,9 +89,13 @@ SELECT* From Members
 SELECT * From Addresses
 select * from Documents
 select * from Packages
+SELECT* From Members
 select * from Memberships
 select * from Payments
 select * from DuePayments
+
+
+Insert into Addresses Values('rn','16, nn','ctg','ctg','ctg','1211','aa',1)
 
 insert into DuePayments values(1,'2024-04-19',105),
 							(1,'2024-04-20',105),

@@ -26,7 +26,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpGet]
+        [HttpGet("allMembers")]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllMembersCommand();
@@ -48,7 +48,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPost]
+        [HttpPost("create/")]
         public async Task<IActionResult> Create(CreateMemberCommand createMember)
         {
             var data = await _sender.Send(createMember);
@@ -57,7 +57,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, UpdateMemberCommand updateMember)
         {
             if (id != updateMember.MemberId)
@@ -69,7 +69,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _sender.Send(new DeleteMemberCommand() { MemberId = id });

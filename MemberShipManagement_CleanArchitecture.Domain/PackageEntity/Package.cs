@@ -19,7 +19,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
         private List<Membership>? Membership { get; set; }
 
         private Package() { }
-
+         
         private Package(string name, string type, int duration, decimal price, bool status)
         {
             PackageName = name;
@@ -31,6 +31,24 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
 
         public static Package CreatePackage(string name, string type, int duration, decimal price, bool status)
         {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new Exception($"Incorrect Package Name: {name}");
+            }
+            if (string.IsNullOrEmpty(type))
+            {
+                throw new Exception($"Incorrect Package Type: {type}");
+            }
+            if (duration <=0)
+            {
+                throw new Exception($"Incorrect Duration: {duration}");
+            }
+            if (price <=0)
+            {
+                throw new Exception($"Incorrect Package Price: {price}");
+            }
+
+
             return new Package(name, type, duration, price, status);
         }
 
@@ -45,11 +63,11 @@ namespace MemberShipManagement_CleanArchitecture.Domain.PackageEntity
             {
                 PackageType = type;
             }
-            if (duration != 0)
+            if (duration !<= 0)
             {
                 Duration = duration;
             }
-            if (price != 0 || price !<0)
+            if (price !<=0)
             {
                 PackagePrice = price;
             }

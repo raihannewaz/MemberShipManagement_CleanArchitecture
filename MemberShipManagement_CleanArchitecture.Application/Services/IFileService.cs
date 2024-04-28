@@ -9,7 +9,9 @@ namespace MemberShipManagement_CleanArchitecture.Application.Services
 {
     public interface IFileService
     {
-        Task<string> UploadFile(IFormFile file);
+        Task<string> UploadImage(IFormFile file, string memberName, string phone);
+
+
         void UpdateFile(string url);
 
         //Task Delete (int id);

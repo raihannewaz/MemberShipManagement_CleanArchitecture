@@ -47,7 +47,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.Payments.Command.Cr
                     due.UpdateDue(updatedDueAmmount);
                 }
 
-
             }
 
             await _paymentRepository.CreateAsync(data);

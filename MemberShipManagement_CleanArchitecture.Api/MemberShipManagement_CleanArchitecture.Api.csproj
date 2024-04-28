@@ -18,4 +18,8 @@
     <ProjectReference Include="..\MemberShipManagement_CleanArchitecture.Infrastructure\MemberShipManagement_CleanArchitecture.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\MemberFiles\" />
+  </ItemGroup>
+
 </Project>

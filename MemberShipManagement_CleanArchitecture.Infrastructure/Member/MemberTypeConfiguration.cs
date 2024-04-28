@@ -25,6 +25,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Member
             builder.Property<bool>("IsActive").IsRequired().HasMaxLength(11);
             builder.Property<DateTime>("DOB").IsRequired();
             builder.Property<DateTime>("AccountCreateDate").IsRequired();
+            builder.HasMany("Memberships")
+                  .WithOne()
+                  .HasForeignKey("MemberId");
 
         }
     }

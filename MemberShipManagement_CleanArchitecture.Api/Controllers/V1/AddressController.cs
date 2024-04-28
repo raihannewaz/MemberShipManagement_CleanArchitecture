@@ -21,7 +21,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 
 
 
-        [HttpPost]
+        [HttpPost("create/")]
         public async Task<IActionResult> Create(CreateAddressCommand createAddress)
         {
             var data = await _sender.Send(createAddress);
@@ -29,7 +29,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, UpdateAddressCommand updateAddress)
         {
             if (id != updateAddress.MemberId)

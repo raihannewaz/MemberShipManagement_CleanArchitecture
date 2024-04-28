@@ -20,7 +20,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
 
-        [HttpPost]
+        [HttpPost("create/")]
         public async Task<IActionResult> Create(CreateDocumentCommand createDocument)
         {
             var data = await _sender.Send(createDocument);
@@ -28,7 +28,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, UpdateDocumentCommand updateDocument)
         {
             if (id != updateDocument.MemberId)
