@@ -1,11 +1,7 @@
 ﻿using FluentValidation;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace MemberShipManagement_CleanArchitecture.Application.Validation.MemberValidation
 {

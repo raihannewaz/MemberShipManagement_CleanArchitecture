@@ -1,17 +1,7 @@
 ﻿using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
 using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
 using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
-
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 
 namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
@@ -68,21 +58,31 @@ namespace MemberShipManagement_CleanArchitecture.Domain.MemberEntity
                 throw new Exception($"Incorrect Last Name: {lName}");
             }
 
-            if (string.IsNullOrEmpty(email))
+            if (!BeAValidPhoneNumber(phone))
             {
-                throw new Exception($"Incorrect Email: {email}");
+                throw new Exception($"Invalid Phone Number: {phone}");
             }
 
-            if (string.IsNullOrEmpty(phone))
+            if (!BeAtLeast18YearsOld(dob))
             {
-                throw new Exception($"Incorrect Phone: {phone}");
+                throw new Exception($"Date of Birth indicates the person is not at least 18 years old: {dob}");
             }
 
 
             return new Member(fName, lName, email, phone, dob);
         }
 
+        private static bool BeAValidPhoneNumber(string phoneNo)
+        {
+            string pattern = @"^(018|017|016|019|013|014|015)\d{8}$";
+            return Regex.IsMatch(phoneNo, pattern);
+        }
 
+        private static bool BeAtLeast18YearsOld(DateTime dob)
+        {
+            DateTime minDate = DateTime.Today.AddYears(-18);
+            return dob <= minDate;
+        }
 
 
         public void UpdateMember(string fName, string lName, string email, string phone, DateTime dob, bool isactive)
