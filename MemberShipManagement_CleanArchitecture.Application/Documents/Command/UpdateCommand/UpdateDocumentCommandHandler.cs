@@ -1,12 +1,6 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.Services;
-using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
-using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+
 
 namespace MemberShipManagement_CleanArchitecture.Application.Documents.Command.UpdateCommand
 {
@@ -32,7 +26,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Documents.Command.U
             {
                 _fileService.UpdateFile(member.GetDocumentUrl());
                 var memberNemandPhone = await _memberRepository.GetById(request.MemberId);
-                var url = await _fileService.UploadImage(request.FileType,memberNemandPhone.GetFirstName(), memberNemandPhone.GetPhone());
+                var url = await _fileService.UploadImage(request.FileType,memberNemandPhone.GetLatName(), memberNemandPhone.GetPhone());
                 member.FileUrl(url);
             }
 

@@ -1,0 +1,29 @@
+﻿global using MediatR;
+global using MemberShipManagement_CleanArchitecture.Application.Services;
+global using MemberShipManagement_CleanArchitecture.Domain.Members;
+global using MemberShipManagement_CleanArchitecture.Domain.Packages;
+global using MemberShipManagement_CleanArchitecture.Domain.Addresses;
+global using MemberShipManagement_CleanArchitecture.Domain.Documents;
+global using Microsoft.AspNetCore.Http;
+global using MemberShipManagement_CleanArchitecture.Domain.AppUsers;
+global using MemberShipManagement_CleanArchitecture.Domain.Services;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.Text.Json.Serialization;
+global using Dapper;
+global using MemberShipManagement_CleanArchitecture.Application.DTO_s;
+global using System.Data;
+global using MemberShipManagement_CleanArchitecture.Domain.DuePayments;
+global using MemberShipManagement_CleanArchitecture.Domain.Payments;
+global using FluentValidation;
+global using MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand;
+global using System.Text.RegularExpressions;
+global using MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand;
+global using MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand;
+global using FluentValidation.AspNetCore;
+global using MemberShipManagement_CleanArchitecture.Application.MemberCQRS.MemberValidation;
+global using MemberShipManagement_CleanArchitecture.Application.Validation.AddressValidation;
+global using MemberShipManagement_CleanArchitecture.Application.Validation.MemberValidation;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
+
+

@@ -1,15 +1,4 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
-using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
-using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 {
     public class MemberDTO

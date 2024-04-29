@@ -1,5 +1,4 @@
 ﻿
-using MediatR;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.UpdateCommand
 {

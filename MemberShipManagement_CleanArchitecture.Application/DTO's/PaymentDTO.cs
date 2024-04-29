@@ -1,10 +1,4 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿
 
 namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 {

@@ -1,12 +1,4 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.Services;
-using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand
 {
     internal sealed class UpdateMemberCommandHandler : IRequestHandler<UpdateMemberCommand, int>
@@ -32,13 +24,15 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Upd
 
             if (request.ImageFile != null)
             {
-                _fileService.UpdateFile(member.GetProfileImageUrl());
-                var url = await _fileService.UploadImage(request.ImageFile, member.GetFirstName(), member.GetPhone());
+                if (member.GetProfileImageUrl() != null)
+                {
+                    _fileService.UpdateFile(member.GetProfileImageUrl());
+                }
+                var url = await _fileService.UploadImage(request.ImageFile, member.GetLatName(), member.GetPhone());
                 member.PhotoUrl(url);
             }
 
             await _memberRepository.UpdateAsync(member);
-
             await _memberRepository.SaveChangeAsync();
 
             return request.MemberId;

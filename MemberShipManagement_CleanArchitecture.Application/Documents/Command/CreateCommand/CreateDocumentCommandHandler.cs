@@ -1,13 +1,4 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.Services;
-using MemberShipManagement_CleanArchitecture.Domain.DocumentEntity;
-using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.Documents.Command.CreateCommand
 {
     internal sealed class CreateDocumentCommandHandler : IRequestHandler<CreateDocumentCommand, Document>
@@ -32,7 +23,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Documents.Command.C
                 if (request.FileType != null)
                 {
                     var member = await _memberRepository.GetById(request.MemberId);
-                    var url =  await _fileService.UploadImage(request.FileType, member.GetFirstName(), member.GetPhone());
+                    var url =  await _fileService.UploadImage(request.FileType, member.GetLatName(), member.GetPhone());
                     data.FileUrl(url);
                 }
                

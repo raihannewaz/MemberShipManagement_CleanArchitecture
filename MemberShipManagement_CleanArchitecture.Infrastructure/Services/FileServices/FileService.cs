@@ -1,7 +1,4 @@
-﻿using MemberShipManagement_CleanArchitecture.Application.Services;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-
+﻿
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileServices
 {
@@ -16,8 +13,9 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
 
         public async Task<string> UploadImage(IFormFile file, string memberName, string phone)
         {
+
             string imagePath = memberName + "_" + phone;
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath,"MemberFiles\\" + imagePath);
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath,"MemberFiles", imagePath);
 
             if (!Directory.Exists(uploadsFolder))
             {
@@ -32,7 +30,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
                 await file.CopyToAsync(fileStream);
             }
 
-            var imgUrl = imagePath+"/" + uniqueFileName;
+            var imgUrl = "MemberFiles/"+ imagePath+"/"+ uniqueFileName;
 
             return imgUrl;
         }
@@ -41,7 +39,7 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileSer
         {
             if (!string.IsNullOrEmpty(url))
             {
-                string existingPhotoPath = _webHostEnvironment.WebRootPath +"MemberFiles\\" + url;
+                string existingPhotoPath = Path.Combine(_webHostEnvironment.WebRootPath, url);
                 if (File.Exists(existingPhotoPath))
                 {
                     File.Delete(existingPhotoPath);

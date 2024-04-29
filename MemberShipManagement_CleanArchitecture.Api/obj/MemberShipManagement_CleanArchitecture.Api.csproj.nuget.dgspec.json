@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj": {}
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj": {}
   },
   "projects": {
-    "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Api",
-        "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
-        "packagesPath": "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\",
-        "outputPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Api\\obj\\",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\MemberShipManagement_CleanArchitecture.Api.csproj",
+        "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Raihan_IsDB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sys-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
-                "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
               },
-              "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
-                "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj"
               }
             }
           }
@@ -93,24 +93,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Application",
-        "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
-        "packagesPath": "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\",
-        "outputPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\obj\\",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj",
+        "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Raihan_IsDB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sys-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -126,8 +126,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
-                "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj"
               }
             }
           }
@@ -180,24 +180,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Domain",
-        "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
-        "packagesPath": "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\",
-        "outputPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Domain\\obj\\",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\MemberShipManagement_CleanArchitecture.Domain.csproj",
+        "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Raihan_IsDB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sys-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -251,24 +251,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
+    "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
         "projectName": "MemberShipManagement_CleanArchitecture.Infrastructure",
-        "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Raihan_IsDB\\.nuget\\packages\\",
-        "outputPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
+        "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\MemberShipManagement_CleanArchitecture.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Sys-05\\.nuget\\packages\\",
+        "outputPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Raihan_IsDB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sys-05\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -284,8 +284,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
-                "projectPath": "F:\\QuadrionTest\\MemberShipManagement_CleanArchitecture\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
+              "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj": {
+                "projectPath": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Application\\MemberShipManagement_CleanArchitecture.Application.csproj"
               }
             }
           }
@@ -342,7 +342,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

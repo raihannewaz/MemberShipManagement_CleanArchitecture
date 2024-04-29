@@ -1,13 +1,4 @@
-﻿using Dapper;
-using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.DTO_s;
-using MemberShipManagement_CleanArchitecture.Application.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.Payments.Query.GetAll
 {
     internal sealed class GetAllPaymentsCommandHandler : IRequestHandler<GetAllPaymentsCommand, IEnumerable<PaymentDTO>>

@@ -1,7 +1,6 @@
 ﻿using Asp.Versioning;
 using MediatR;
-using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.Memberships.Command.DeleteCommand;
+
 using MemberShipManagement_CleanArchitecture.Application.Memberships.Query;
 using MemberShipManagement_CleanArchitecture.Application.Memberships.Query.GetAll;
 using Microsoft.AspNetCore.Mvc;
@@ -21,22 +20,22 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpPost("create/")]
-        public async Task<IActionResult> Create(CreateMembershipCommand createMembership)
-        {
-            var data = await _sender.Send(createMembership);
+        //[HttpPost("create")]
+        //public async Task<IActionResult> Create(CreateMembershipCommand createMembership)
+        //{
+        //    var data = await _sender.Send(createMembership);
 
-            return Ok(data);
-        }
+        //    return Ok(data);
+        //}
 
-        [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            await _sender.Send(new DeleteMembershipCommand { MembershipId = id });
-            return Ok("Deleted!");
-        }
+        //[HttpDelete("delete{id}")]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    await _sender.Send(new DeleteMembershipCommand { MembershipId = id });
+        //    return Ok("Deleted!");
+        //}
 
-        [HttpGet("allMemberships/")]
+        [HttpGet("allMemberships")]
         public async Task<IActionResult> GetAll()
         {
             var query = new GetAllMembershipsCommand();

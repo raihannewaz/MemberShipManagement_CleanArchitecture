@@ -1,44 +1,35 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.DuePaymentEntity;
-using MemberShipManagement_CleanArchitecture.Domain.MembershipEntity;
-using MemberShipManagement_CleanArchitecture.Domain.PaymentEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.Payments.Command.CreateCommand
 {
     internal sealed class CreatePaymentCommandHandler : IRequestHandler<CreatePaymentCommand, int>
     {
         private readonly IPaymentRepository _paymentRepository;
-        private readonly IMembershipRepository _membershipRepository;
-        private readonly IDuePaymentRepository _duePaymentRepository ;
+        private readonly IDuePaymentRepository _duePaymentRepository;
+        private readonly IMemberRepository _memberRepository;
 
-        public CreatePaymentCommandHandler(IPaymentRepository paymentRepository,IMembershipRepository membershipRepository, IDuePaymentRepository duePaymentRepository)
+        public CreatePaymentCommandHandler(IPaymentRepository paymentRepository, IDuePaymentRepository duePaymentRepository, IMemberRepository memberRepository)
         {
             _paymentRepository = paymentRepository;
-            _membershipRepository = membershipRepository;
             _duePaymentRepository = duePaymentRepository;
+            _memberRepository = memberRepository;
         }
 
         public async Task<int> Handle(CreatePaymentCommand request, CancellationToken cancellationToken)
         {
 
             var data = Payment.CreatePayment(request.MembershipId, request.AdvanceInstallMent, request.PaidAmmount);
-            var membership =  await _membershipRepository.GetById(request.MembershipId);
-            var installment = membership.GetInstallmentAmmount();
-            var totalInstallmet = membership.GetTotalInstallment();
-            var InstallmentMinus = data.InstallmentMinus(request.PaidAmmount, request.AdvanceInstallMent, totalInstallmet, installment);
-            membership.InstallmentCalculateWithPayment(InstallmentMinus);
+
+            var member = await _memberRepository.GetById(request.MemberId);
+
+            member.UpdateMembershipInstallment(request.MembershipId, request.PaidAmmount, request.AdvanceInstallMent);
+
             var due = await _duePaymentRepository.GetById(request.MembershipId);
-            
+
             if (due != null)
             {
-                var updatedDueAmmount = due.UpdateDuePayment(due, request.PaidAmmount);
+                var updatedDueAmmount = due.UpdateDuePayment(request.PaidAmmount);
 
-                if (updatedDueAmmount <=0)
+                if (updatedDueAmmount <= 0)
                 {
                     await _duePaymentRepository.DeleteAsync(due);
                 }

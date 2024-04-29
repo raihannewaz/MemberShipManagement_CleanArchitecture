@@ -1,5 +1,4 @@
 ﻿
-using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
 
 namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 {

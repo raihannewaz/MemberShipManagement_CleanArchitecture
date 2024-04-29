@@ -20,7 +20,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
 
-        [HttpPost("create/")]
+        [HttpPost("create")]
         public async Task<IActionResult> Create(CreateDocumentCommand createDocument)
         {
             var data = await _sender.Send(createDocument);

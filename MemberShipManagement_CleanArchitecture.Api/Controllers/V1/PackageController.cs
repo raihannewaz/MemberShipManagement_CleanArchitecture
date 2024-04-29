@@ -3,7 +3,6 @@ using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.Packages.Query;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Query.GetAll;
 using MemberShipManagement_CleanArchitecture.Application.Packages.Query.GetById;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +43,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(result);
         }
 
-        [HttpPost("create/")]
+        [HttpPost("create")]
         public async Task<IActionResult> Create(CreatePackageCommand createPackage)
         {
             var data = await _sender.Send(createPackage);

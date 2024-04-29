@@ -1,5 +1,4 @@
-﻿using FluentValidation;
-using MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand;
+﻿
 
 
 namespace MemberShipManagement_CleanArchitecture.Application.Validation.AddressValidation

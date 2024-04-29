@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Wa2Ne60K0AmxuFibi6ly8yJ/a/wWpIVSR8apMglw8U=",
+  "Hash": "VjAr8jXKzbKP8eo0KMGZK3k7wB63E+6gbXttpNcVX8k=",
   "Source": "MemberShipManagement_CleanArchitecture.Api",
   "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\d_01532623254\\638498973760766561_a8bd1f9386.jpg",
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Newaz_01634213254\\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
       "SourceId": "MemberShipManagement_CleanArchitecture.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberFiles/d_01532623254/638498973760766561_a8bd1f9386.jpg",
+      "RelativePath": "MemberFiles/Newaz_01634213254/638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberFiles\\d_01532623254\\638498973760766561_a8bd1f9386.jpg"
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\Newaz_01634213254\\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
     },
     {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\r_01524512415\\638498972449704942_a8bd1f9386.jpg",
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
       "SourceId": "MemberShipManagement_CleanArchitecture.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberFiles/r_01524512415/638498972449704942_a8bd1f9386.jpg",
+      "RelativePath": "MemberFiles/sa_01421542141/638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberFiles\\r_01524512415\\638498972449704942_a8bd1f9386.jpg"
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\sa_01421542141\\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
     },
     {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499955731418353_Screenshot 2024-04-03 160149.png",
       "SourceId": "MemberShipManagement_CleanArchitecture.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberFiles/Raihan_01829428422/638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg",
+      "RelativePath": "MemberFiles/sa_01421542141/638499955731418353_Screenshot 2024-04-03 160149.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberFiles\\Raihan_01829428422\\638499251537029157_boy-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg"
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\sa_01421542141\\638499955731418353_Screenshot 2024-04-03 160149.png"
     },
     {
-      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg",
+      "Identity": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499956474523227_a8bd1f9386.jpg",
       "SourceId": "MemberShipManagement_CleanArchitecture.Api",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\",
       "BasePath": "_content/MemberShipManagement_CleanArchitecture.Api",
-      "RelativePath": "MemberFiles/Raihan_01829428422/638499251754520320_a8bd1f9386.jpg",
+      "RelativePath": "MemberFiles/sa_01421542141/638499956474523227_a8bd1f9386.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MemberFiles\\Raihan_01829428422\\638499251754520320_a8bd1f9386.jpg"
+      "OriginalItemSpec": "wwwroot\\MemberFiles\\sa_01421542141\\638499956474523227_a8bd1f9386.jpg"
     }
   ]
 }

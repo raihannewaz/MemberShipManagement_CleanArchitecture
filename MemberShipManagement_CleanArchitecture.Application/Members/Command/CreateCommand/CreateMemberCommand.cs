@@ -1,12 +1,4 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using Microsoft.AspNetCore.Http;
-using MemberShipManagement_CleanArchitecture.Application.DTO_s;
+﻿
 
 namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand
 {

@@ -3,13 +3,9 @@ using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand;
-using MemberShipManagement_CleanArchitecture.Application.Members.Query;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetById;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 {
@@ -48,8 +44,8 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             return Ok(data);
         }
 
-        [HttpPost("create/")]
-        public async Task<IActionResult> Create(CreateMemberCommand createMember)
+        [HttpPost("create")]
+        public async Task<IActionResult> Create([FromForm] CreateMemberCommand createMember)
         {
             var data = await _sender.Send(createMember);
 

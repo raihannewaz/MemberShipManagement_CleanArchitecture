@@ -1,10 +1,4 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MemberShipManagement_CleanArchitecture.Application.Packages.Command.DeleteCommand
 {

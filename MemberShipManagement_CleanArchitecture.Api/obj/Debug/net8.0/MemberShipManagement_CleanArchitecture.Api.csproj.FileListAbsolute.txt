@@ -240,7 +240,6 @@ D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\Memb
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.AssemblyInfoInputs.cache
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.AssemblyInfo.cs
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.csproj.CoreCompileInputs.cache
-D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.sourcelink.json
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\staticwebassets.build.json
@@ -258,3 +257,4 @@ D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\Memb
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.genruntimeconfig.cache
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\ref\MemberShipManagement_CleanArchitecture.Api.dll
 D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Api\obj\Debug\net8.0\MemberShipManagement_CleanArchitecture.Api.MvcApplicationPartsAssemblyInfo.cs

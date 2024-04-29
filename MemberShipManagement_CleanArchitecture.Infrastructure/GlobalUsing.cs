@@ -1,0 +1,35 @@
+﻿
+global using MemberShipManagement_CleanArchitecture.Application.Services;
+global using MemberShipManagement_CleanArchitecture.Domain.Members;
+global using MemberShipManagement_CleanArchitecture.Domain.Packages;
+global using MemberShipManagement_CleanArchitecture.Domain.Addresses;
+global using MemberShipManagement_CleanArchitecture.Domain.Documents;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.Extensions.Hosting;
+global using MemberShipManagement_CleanArchitecture.Domain.AppUsers;
+global using MemberShipManagement_CleanArchitecture.Domain.Services;
+global using Microsoft.AspNetCore.Hosting;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.DATA.Context;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using System.Data;
+global using MemberShipManagement_CleanArchitecture.Domain.DuePayments;
+global using MemberShipManagement_CleanArchitecture.Domain.Payments;
+global using FluentValidation;
+global using Microsoft.Extensions.DependencyInjection;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Addresses;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Documents;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Members;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Packages;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Payments;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Data.SqlClient;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.IdentityModel.Tokens;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Text;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.DuePayments;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Services.JWT_Services;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Services.AutoUpdate_Service;
+global using MemberShipManagement_CleanArchitecture.Infrastructure.Services.FileServices;
+

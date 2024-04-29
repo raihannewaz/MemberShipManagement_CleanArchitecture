@@ -1,6 +1,4 @@
 ﻿
-using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
 
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand
 {

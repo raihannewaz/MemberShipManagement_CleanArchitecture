@@ -16,7 +16,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
             _sender = sender;
         }
 
-        [HttpPost("login/")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login(AppUserLoginCommand appUserLogin)
         {
             var data = await _sender.Send(appUserLogin);

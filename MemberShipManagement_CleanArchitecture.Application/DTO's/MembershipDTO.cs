@@ -1,11 +1,4 @@
-﻿using MemberShipManagement_CleanArchitecture.Domain.MemberEntity;
-using MemberShipManagement_CleanArchitecture.Domain.PackageEntity;
-using MemberShipManagement_CleanArchitecture.Domain.PaymentEntity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MemberShipManagement_CleanArchitecture.Application.DTO_s
 {

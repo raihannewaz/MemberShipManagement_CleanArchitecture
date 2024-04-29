@@ -1,7 +1,4 @@
 ﻿
-using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.AddressEntity;
-
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.UpdateCommand
 {
     internal sealed class UpdateAddressCommandHandler : IRequestHandler<UpdateAddressCommand, int>

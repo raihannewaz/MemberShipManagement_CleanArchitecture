@@ -1,9 +1,7 @@
 ﻿using Asp.Versioning;
 using MediatR;
 using MemberShipManagement_CleanArchitecture.Application.Payments.Command.CreateCommand;
-using MemberShipManagement_CleanArchitecture.Application.Payments.Query;
 using MemberShipManagement_CleanArchitecture.Application.Payments.Query.GetAll;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1

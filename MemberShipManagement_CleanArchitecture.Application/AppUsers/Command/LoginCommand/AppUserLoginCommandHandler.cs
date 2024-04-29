@@ -1,12 +1,4 @@
-﻿using MediatR;
-using MemberShipManagement_CleanArchitecture.Domain.AppUserEntity;
-using MemberShipManagement_CleanArchitecture.Domain.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MemberShipManagement_CleanArchitecture.Application.AppUsers.Command.LoginCommand
 {
     internal sealed class AppUserLoginCommandHandler : IRequestHandler<AppUserLoginCommand, string>

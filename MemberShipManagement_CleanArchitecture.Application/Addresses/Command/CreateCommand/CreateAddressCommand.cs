@@ -1,6 +1,4 @@
 ﻿
-using MediatR;
-
 namespace MemberShipManagement_CleanArchitecture.Application.Addresses.Command.CreateCommand
 {
     public class CreateAddressCommand : IRequest<int>

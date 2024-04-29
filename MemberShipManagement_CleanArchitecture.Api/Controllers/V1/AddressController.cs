@@ -21,7 +21,7 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 
 
 
-        [HttpPost("create/")]
+        [HttpPost("create")]
         public async Task<IActionResult> Create(CreateAddressCommand createAddress)
         {
             var data = await _sender.Send(createAddress);
