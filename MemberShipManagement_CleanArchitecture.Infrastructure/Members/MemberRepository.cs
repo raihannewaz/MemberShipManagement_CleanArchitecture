@@ -1,5 +1,8 @@
 ﻿
 
+using Dapper;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Members
 {
     public class MemberRepository : IMemberRepository
@@ -28,6 +31,31 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Members
              _context.Members.Remove(member);
             return Task.CompletedTask;
         }
+
+        public async void EmailAndPhoneValdator(string email, string phone)
+        {
+
+            using (var conn = _dapperContext.CreateConnection())
+            {
+                var emailQuery = "SELECT Email FROM Members WHERE Email = @Email";
+                var phoneQuery = "SELECT PhoneNo FROM Members WHERE PhoneNo = @Phone";
+
+                var existingEmail = await conn.QueryAsync<string>(emailQuery, new { Email = email });
+                if (existingEmail.Any())
+                {
+                    throw new ArgumentException("This Email is Already Exists!");
+                }
+
+                var existingPhone = await conn.QuerySingleOrDefaultAsync<string>(phoneQuery, new { Phone = phone });
+                if (existingPhone != null)
+                {
+                    throw new ArgumentException("This Phone Number is Already Exists!");
+                }
+
+            }
+        }
+
+
 
 
         public async Task<Member> GetById(int a)

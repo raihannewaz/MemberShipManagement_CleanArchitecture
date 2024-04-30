@@ -9,7 +9,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.Members
         Task DeleteAsync(Member member);
         Task<List<Membership>> GetDueMemberPackagesAsync();
         Task<Member> GetById(int a);
-        
+
+        void EmailAndPhoneValdator(string email, string phone);
+
+
         Task SaveChangeAsync();
     }
 }

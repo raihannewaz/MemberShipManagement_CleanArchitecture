@@ -23,9 +23,9 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
         [HttpGet("allMembers")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(string? searchName, int page, int pageSize)
         {
-            var query = new GetAllMembersCommand();
+            var query = new GetAllMembersCommand(searchName, page, pageSize);
 
             var data = await _sender.Send(query);
 

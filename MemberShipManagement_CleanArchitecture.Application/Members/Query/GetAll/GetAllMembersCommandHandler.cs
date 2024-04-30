@@ -1,8 +1,10 @@
 ﻿
 
+using MemberShipManagement_CleanArchitecture.Application.Helpers;
+
 namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll
 {
-    internal sealed class GetAllMembersCommandHandler : IRequestHandler<GetAllMembersCommand, IEnumerable<MemberDTO>>
+    internal sealed class GetAllMembersCommandHandler : IRequestHandler<GetAllMembersCommand, Pagination<MemberDTO>>
     {
      
         private readonly IDapperDbContext _dbContext;
@@ -12,15 +14,32 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAl
             _dbContext = dbContext;
         }
 
-        public async Task<IEnumerable<MemberDTO>> Handle(GetAllMembersCommand request, CancellationToken cancellationToken)
+        public async Task<Pagination<MemberDTO>> Handle(GetAllMembersCommand request, CancellationToken cancellationToken)
         {
+           
+            if (request.searchTerm != null)
+            {
+                using (var conn = _dbContext.CreateConnection())
+                {
+                    string query = "SELECT* From Members Where FirstName = @name";
+
+                    var result = await conn.QueryAsync<MemberDTO>(query, new {name = request.searchTerm});
+                    var pageination = Pagination<MemberDTO>.CreatePgination(result, request.page, request.pageSize);
+
+                    return pageination;
+                }
+
+            }
+
             using (var conn = _dbContext.CreateConnection())
             {
                 string query = "SELECT* From Members";
 
                 var result = await conn.QueryAsync<MemberDTO>(query);
 
-                return result.ToList();
+                var pageination = Pagination<MemberDTO>.CreatePgination(result, request.page, request.pageSize);
+
+                return pageination;
             }
         }
     }

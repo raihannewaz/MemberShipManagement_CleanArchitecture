@@ -20,6 +20,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
         {
             try
             {
+                _memberRepository.EmailAndPhoneValdator(request.Email, request.PhoneNo);
                 var member = Member.CreateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB);
                 var pack = await _packageRepository.GetById(request.PackageId);
 
