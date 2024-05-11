@@ -2,7 +2,7 @@ using Asp.Versioning;
 using FluentValidation.AspNetCore;
 using MemberShipManagement_CleanArchitecture.Application;
 using MemberShipManagement_CleanArchitecture.Infrastructure;
-using MemberShipManagement_CleanArchitecture.Infrastructure.DATA;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -100,13 +100,15 @@ namespace MemberShipManagement_CleanArchitecture.Api
             var app = builder.Build();
             app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
 
+            //if (app.Environment.IsDevelopment())
+            //{
+            //    app.UseSwagger();
+            //    app.UseSwaggerUI();
+            //}
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseStaticFiles();
 
             app.UseHttpsRedirection();

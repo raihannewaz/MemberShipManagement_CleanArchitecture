@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\Newaz_01634213254\\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "PackagePath": "staticwebassets\\MemberFiles\\Newaz_01634213254\\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
+    },
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg",
+      "PackagePath": "staticwebassets\\MemberFiles\\sa_01421542141\\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg"
+    },
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499955731418353_Screenshot 2024-04-03 160149.png",
+      "PackagePath": "staticwebassets\\MemberFiles\\sa_01421542141\\638499955731418353_Screenshot 2024-04-03 160149.png"
+    },
+    {
+      "Id": "D:\\Raihan\\Clone\\MemberShipManagement_CleanArchitecture.Api\\wwwroot\\MemberFiles\\sa_01421542141\\638499956474523227_a8bd1f9386.jpg",
+      "PackagePath": "staticwebassets\\MemberFiles\\sa_01421542141\\638499956474523227_a8bd1f9386.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.MemberShipManagement_CleanArchitecture.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "build\\MemberShipManagement_CleanArchitecture.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "buildMultiTargeting\\MemberShipManagement_CleanArchitecture.Api.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.MemberShipManagement_CleanArchitecture.Api.props",
+      "PackagePath": "buildTransitive\\MemberShipManagement_CleanArchitecture.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -20,7 +20,8 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
         {
             try
             {
-                _memberRepository.EmailAndPhoneValdator(request.Email, request.PhoneNo);
+                await _memberRepository.EmailAndPhoneValidatorAsync(request.Email, request.PhoneNo);
+
                 var member = Member.CreateMember(request.FirstName, request.LastName, request.Email, request.PhoneNo, request.DOB);
                 var pack = await _packageRepository.GetById(request.PackageId);
 
@@ -31,6 +32,7 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
                     var url = await _fileService.UploadImage(request.ImageFile, request.LastName, request.PhoneNo);
                     member.PhotoUrl(url);
                 }
+
                 await _memberRepository.CreateAsync(member);
                 await _memberRepository.SaveChangeAsync();
 
@@ -40,6 +42,6 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Command.Cre
             {
                 throw ex;
             }
-        }     
+        }
     }
 }

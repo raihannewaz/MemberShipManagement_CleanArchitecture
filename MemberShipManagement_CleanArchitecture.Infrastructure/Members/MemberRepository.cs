@@ -1,6 +1,7 @@
 ﻿
 
 using Dapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace MemberShipManagement_CleanArchitecture.Infrastructure.Members
@@ -32,28 +33,39 @@ namespace MemberShipManagement_CleanArchitecture.Infrastructure.Members
             return Task.CompletedTask;
         }
 
-        public async void EmailAndPhoneValdator(string email, string phone)
+
+        public async Task EmailAndPhoneValidatorAsync(string email, string phone)
         {
-
-            using (var conn = _dapperContext.CreateConnection())
+            try
             {
-                var emailQuery = "SELECT Email FROM Members WHERE Email = @Email";
-                var phoneQuery = "SELECT PhoneNo FROM Members WHERE PhoneNo = @Phone";
-
-                var existingEmail = await conn.QueryAsync<string>(emailQuery, new { Email = email });
-                if (existingEmail.Any())
+                using (var conn = _dapperContext.CreateConnection())
                 {
-                    throw new ArgumentException("This Email is Already Exists!");
-                }
+                    var emailQuery = "SELECT COUNT(*) FROM Members WHERE LOWER(Email) = LOWER(@Email)";
+                    var phoneQuery = "SELECT COUNT(*) FROM Members WHERE PhoneNo = @Phone";
 
-                var existingPhone = await conn.QuerySingleOrDefaultAsync<string>(phoneQuery, new { Phone = phone });
-                if (existingPhone != null)
-                {
-                    throw new ArgumentException("This Phone Number is Already Exists!");
-                }
+                    var existingEmailCount = await conn.ExecuteScalarAsync<int>(emailQuery, new { Email = email });
 
+                    if (existingEmailCount > 0)
+                    {
+                        throw new ArgumentException("This Email is Already Exists!");
+                    }
+
+                    var existingPhoneCount = await conn.ExecuteScalarAsync<int>(phoneQuery, new { Phone = phone });
+                    if (existingPhoneCount > 0)
+                    {
+                        throw new ArgumentException("This Phone Number is Already Exists!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in EmailAndPhoneValidatorAsync: {ex.Message}");
+                throw;
             }
         }
+
+
+
 
 
 

@@ -21,12 +21,12 @@ namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAl
             {
                 using (var conn = _dbContext.CreateConnection())
                 {
-                    string query = "SELECT* From Members Where FirstName = @name";
+                    string query = "SELECT * FROM Members WHERE FirstName LIKE @searchTerm OR LastName LIKE @searchTerm";
 
-                    var result = await conn.QueryAsync<MemberDTO>(query, new {name = request.searchTerm});
-                    var pageination = Pagination<MemberDTO>.CreatePgination(result, request.page, request.pageSize);
+                    var result = await conn.QueryAsync<MemberDTO>(query, new { searchTerm = $"%{request.searchTerm}%" });
+                    var pagination = Pagination<MemberDTO>.CreatePgination(result, request.page, request.pageSize);
 
-                    return pageination;
+                    return pagination;
                 }
 
             }

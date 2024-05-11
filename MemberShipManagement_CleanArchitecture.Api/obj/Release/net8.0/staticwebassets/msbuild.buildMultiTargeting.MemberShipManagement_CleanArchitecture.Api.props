@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MemberShipManagement_CleanArchitecture.Api.props" />
+</Project>

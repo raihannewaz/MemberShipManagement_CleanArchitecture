@@ -2,8 +2,9 @@
 
 namespace MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll
 {
-    public record GetAllMembersCommand(string? searchTerm, int page, int pageSize) : IRequest<Pagination<MemberDTO>>
+    public record GetAllMembersCommand(string? searchTerm) : IRequest<Pagination<MemberDTO>>
     {
-
+        public int page = 1;
+        public int pageSize = 3;
     }
 }

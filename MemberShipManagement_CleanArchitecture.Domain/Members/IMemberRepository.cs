@@ -10,7 +10,7 @@ namespace MemberShipManagement_CleanArchitecture.Domain.Members
         Task<List<Membership>> GetDueMemberPackagesAsync();
         Task<Member> GetById(int a);
 
-        void EmailAndPhoneValdator(string email, string phone);
+        Task EmailAndPhoneValidatorAsync(string email, string phone);
 
 
         Task SaveChangeAsync();

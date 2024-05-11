@@ -10,11 +10,10 @@ namespace MemberShipManagement_CleanArchitecture.Domain.AppUsers
 {
     public class AppUser
     {
-
         public string? UserName {  get; set; }
         public string? Password {  get; set; }
 
-
+       
         private AppUser() { }
 
         private AppUser(string userName, string pass)

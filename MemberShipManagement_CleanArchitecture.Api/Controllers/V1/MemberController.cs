@@ -1,11 +1,13 @@
 ﻿using Asp.Versioning;
 using MediatR;
+using MemberShipManagement_CleanArchitecture.Application.DTO_s;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.CreateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.DeleteCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Command.UpdateCommand;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetAll;
 using MemberShipManagement_CleanArchitecture.Application.Members.Query.GetById;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
 {
@@ -23,9 +25,9 @@ namespace MemberShipManagement_CleanArchitecture.Api.Controllers.V1
         }
 
         [HttpGet("allMembers")]
-        public async Task<IActionResult> GetAll(string? searchName, int page, int pageSize)
+        public async Task<IActionResult> GetAll(string? searchName)
         {
-            var query = new GetAllMembersCommand(searchName, page, pageSize);
+            var query = new GetAllMembersCommand(searchName);
 
             var data = await _sender.Send(query);
 

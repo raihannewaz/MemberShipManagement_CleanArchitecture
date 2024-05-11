@@ -1,0 +1,68 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\Newaz_01634213254\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MemberShipManagement_CleanArchitecture.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MemberShipManagement_CleanArchitecture.Api</BasePath>
+      <RelativePath>MemberFiles/Newaz_01634213254/638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\Newaz_01634213254\638499849291289756_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MemberShipManagement_CleanArchitecture.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MemberShipManagement_CleanArchitecture.Api</BasePath>
+      <RelativePath>MemberFiles/sa_01421542141/638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499955292075439_fe0096d5-31fb-4ef2-bd39-49bdfe9b5553.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499955731418353_Screenshot 2024-04-03 160149.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MemberShipManagement_CleanArchitecture.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MemberShipManagement_CleanArchitecture.Api</BasePath>
+      <RelativePath>MemberFiles/sa_01421542141/638499955731418353_Screenshot 2024-04-03 160149.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499955731418353_Screenshot 2024-04-03 160149.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499956474523227_a8bd1f9386.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MemberShipManagement_CleanArchitecture.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MemberShipManagement_CleanArchitecture.Api</BasePath>
+      <RelativePath>MemberFiles/sa_01421542141/638499956474523227_a8bd1f9386.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\MemberFiles\sa_01421542141\638499956474523227_a8bd1f9386.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

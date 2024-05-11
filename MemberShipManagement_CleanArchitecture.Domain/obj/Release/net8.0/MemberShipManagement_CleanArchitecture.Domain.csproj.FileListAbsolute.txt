@@ -1,0 +1,13 @@
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\bin\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.deps.json
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\bin\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.dll
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\bin\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.pdb
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.csproj.AssemblyReference.cache
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.AssemblyInfoInputs.cache
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.AssemblyInfo.cs
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.sourcelink.json
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.dll
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\refint\MemberShipManagement_CleanArchitecture.Domain.dll
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\MemberShipManagement_CleanArchitecture.Domain.pdb
+D:\Raihan\Clone\MemberShipManagement_CleanArchitecture.Domain\obj\Release\net8.0\ref\MemberShipManagement_CleanArchitecture.Domain.dll
